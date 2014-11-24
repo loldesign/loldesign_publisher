@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loldesign Publisher</title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :modernizr %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render partial: '/layouts/loldesign_publisher/header_main' %>
+
+  <section class='container-main'>
+    <%= render partial: '/layouts/loldesign_publisher/nav_main' %>
+    <section class='content'>
+      <%= yield %>
+    </section>
+  </section>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag '/grid.js' if Rails.env.development? %>
+</body>
+</html>

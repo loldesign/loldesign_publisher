@@ -1,0 +1,20 @@
+@import "base";
+
+$header-background: #a7a9ab;
+
+header.main{
+  background: $header-background;
+
+  a{
+    color: #fff;
+    font-size: 12px;
+  
+    &.logout{
+      float: right;
+    }
+  }
+
+  i{
+    margin: 0px;
+  }
+}

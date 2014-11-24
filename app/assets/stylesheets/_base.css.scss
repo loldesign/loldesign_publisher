@@ -1,0 +1,61 @@
+//grid-config
+$grid_width: 38px;
+$grid_cutter: 10px;
+
+//font-config
+$font_size_base: 16;
+$light: 300;
+$normal: 400; 
+$bold:  700;
+
+//colors
+
+// z-index config
+$z-index-low:    -1000;
+$z-index-normal: 1;
+$z-index-high:   1000;
+
+@mixin grid($size){
+  $width: ($grid_width * $size) + ($grid_cutter * ( $size - 1) );
+  width: $width;
+  float: left;
+  position: relative;
+  margin-left: $grid_cutter / 2;
+  margin-right: $grid_cutter / 2;
+}
+
+@mixin push($columns) {
+  position: relative;
+  left: $columns*($grid_width + $grid_cutter);
+}
+
+@mixin alpha{
+  margin-left: 0px;
+}
+
+@mixin omega{
+  margin-right: 0px;
+}
+
+@mixin font_size($size){
+  font-size: #{$size/$font_size_base}em;
+}
+
+@mixin container($width:960px){
+  width: $width;
+  margin: auto;
+  @include clearfix;
+}
+
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}

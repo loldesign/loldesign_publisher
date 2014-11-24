@@ -1,0 +1,10 @@
+@import "base";
+
+.container-main{
+  @include container;
+}
+
+.content{
+  @include grid(15);
+  @include push(1);
+}

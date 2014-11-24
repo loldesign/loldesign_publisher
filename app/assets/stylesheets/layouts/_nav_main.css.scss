@@ -1,0 +1,30 @@
+@import "base";
+
+$link-color: #6d6e71;
+$link-active-color: #484045;
+$link-border-color: #c6c6c6;
+
+nav.main{
+  @include grid(4);
+  margin-top: 30px;
+
+  ul{
+    margin-top: 30px;
+  }
+
+  a{
+    color: $link-color;
+    font-size: 15px;
+    border-bottom: 1px solid $link-border-color;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: $normal;
+
+    &[data-active=true],
+    &:hover{
+      color: $link-active-color;
+      background: image-url('loldesign_publisher/nav_active_link.svg') no-repeat 177px 8px;
+    }
+  }
+}
