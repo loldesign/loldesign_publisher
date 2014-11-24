@@ -1,0 +1,8 @@
+paths:
+  logo:   'loldesign_publisher/logo.png'
+  logout: 'javadcript://'
+
+  menu_links:
+    banners:   'javascript://'
+    recipes:   'javascript://'
+    schedules: 'javascript://'
