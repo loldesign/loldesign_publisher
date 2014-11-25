@@ -3,6 +3,12 @@ paths:
   logout: 'javascript://'
 
   menu_links:
-    banners:   'javascript://'
-    recipes:   'javascript://'
-    schedules: 'javascript://'
+    banners:   
+      name: 'Banner Home'
+      path: 'javascript://'
+    recipes:
+      name: 'Receitas'
+      path: 'javascript://'
+    schedules: 
+      name: 'Agenda / Cursos'
+      path: 'javascript://'
