@@ -10,6 +10,10 @@ module LoldesignPublisher
 
         LoldesignPublisher.read_config()
       end
+
+      config.to_prepare do
+        ApplicationController.helper(LoldesignPublisher::PublisherHelper)
+      end
     end
   end
 end

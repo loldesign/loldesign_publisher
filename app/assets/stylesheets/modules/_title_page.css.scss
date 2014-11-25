@@ -1,0 +1,65 @@
+@import "base";
+
+header.title-page{
+  @include clearfix;
+  border-bottom: 1px dotted #000;
+  
+  h2{
+    font-size: 30px;
+    @include grid(11);
+    @include alpha;
+  }
+
+  .btn{
+    @include grid(2);
+    display: none;
+
+    &:last-child{
+      @include omega;
+    }
+
+    a{
+      font-size: 12px;
+      padding: 0px;
+    }
+  }
+
+  .btn.show{
+    height: 20px;
+    line-height: 18px;
+    margin-top: 13px;
+  }
+
+  .btn.save{
+    height: 27px;
+    line-height: 25px;
+    margin-top: 10px;
+    // background-image: linear-gradient(#3ca957, #053611);
+  }
+
+  &[data-show=true]{
+    .btn.show{
+      display: block;
+    }
+  }
+
+  &[data-save=true]{
+    .btn.save{
+      display: block;
+    }
+  }
+
+  &[data-show=true][data-save=false]{
+    .btn.show{
+      display: block;
+      @include push(2);
+    }
+  }
+
+  &[data-show=false][data-save=true]{
+    .btn.save{
+      display: block;
+      @include push(2);
+    }
+  }
+}
