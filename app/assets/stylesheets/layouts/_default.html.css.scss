@@ -7,4 +7,5 @@
 .content{
   @include grid(15);
   @include push(1);
+  margin-top: 30px;
 }
