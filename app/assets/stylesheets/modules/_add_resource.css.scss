@@ -1,0 +1,12 @@
+@import "base";
+
+.btn.add-resource{
+  margin-top: 20px;
+  height: 25px;
+  line-height: 23px;
+
+  a{
+    font-size: 12px;
+    font-weight: $normal;
+  }
+}

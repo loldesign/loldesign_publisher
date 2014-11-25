@@ -1,0 +1,31 @@
+@import "base";
+
+table.table-page{
+  border: 0px;
+  margin-top: 20px;
+  
+  thead{
+    background: $gray-main;
+
+    th{
+      font-size: 14px;
+      font-weight: $normal;
+      padding: 5px 10px;
+    }
+  }
+  tbody{
+    td{
+      font-size: 12px;
+      font-weight: $normal;
+      border-bottom: 1px solid #e5e5e5;
+    }
+  }
+
+  a{
+    color: $gray-main;
+    font-size: 16px;
+    i{
+      margin: 0px;
+    }
+  }
+}
