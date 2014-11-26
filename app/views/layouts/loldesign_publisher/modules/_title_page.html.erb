@@ -1,11 +1,6 @@
 <header class="title-page" data-show=<%= show_options[:display] %> data-save=<%= save_options[:display] %>>
   <h2><%= title %></h2>
 
-  <div class='pretty medium default btn show'>
-    <%= link_to "Visualizar", show_options[:path] %>
-  </div>
-
-  <div class='pretty medium secondary btn save'>
-    <%= link_to "Salvar", save_options[:path] %>
-  </div>
+  <%= show_resource 'Visualizar', show_options[:path] %>
+  <%= save_resource 'Salvar'    , save_options[:path] %>
 </header>
