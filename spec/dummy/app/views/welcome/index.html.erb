@@ -22,8 +22,8 @@
       <td>Curso</td>
       <td><%= check_box :user, :active %></td>
       <td>
-        <%= link_to 'javascript://' do %> <i class='icon-pencil'></i> <% end -%>
-        <%= link_to 'javascript://' do %> <i class='icon-cancel-circled'></i> <% end -%>
+        <%= edit_resource   root_path %>
+        <%= remove_resource root_path %>
       </td>
     </tr>
     <% end -%>
