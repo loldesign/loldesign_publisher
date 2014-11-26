@@ -11,30 +11,19 @@ header.title-page{
   }
 
   .btn{
-    @include grid(2);
     display: none;
 
     &:last-child{
       @include omega;
     }
-
-    a{
-      font-size: 12px;
-      padding: 0px;
-    }
   }
 
   .btn.show{
-    height: 20px;
-    line-height: 18px;
     margin-top: 13px;
   }
 
   .btn.save{
-    height: 27px;
-    line-height: 25px;
     margin-top: 10px;
-    // background-image: linear-gradient(#3ca957, #053611);
   }
 
   &[data-show=true]{
