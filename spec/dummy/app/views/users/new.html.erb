@@ -1,0 +1,23 @@
+<%= title_page 'Novo Resource', show: root_path %>
+
+<%= simple_form_for @user , html: {class: 'three-columns'} do |f| %>
+  <!-- simple_form will inject DIV here :( -->
+  <article>
+    <%= f.input :name, label: false, placeholder: 'Nome' %>
+    <%= f.input :email, label: false, placeholder: 'E-mail' %>
+    <%= f.input :password, label: false, placeholder: 'Senha', input_html: {class: 'small'} %>
+    <%= f.input :active, label: 'Ativo' %>
+  </article>
+  <article>
+    <%= f.input :description, label: false, placeholder: 'Descrição' %>
+  </article>
+  <article>
+    <%= f.input :name, label: false, placeholder: 'Nome' %>
+    <%= f.input :email, label: false, placeholder: 'E-mail' %>
+  </article>
+  
+  <footer>
+    <%= save_resource 'Salvar', root_path %>
+    <%= remove_resource root_path, type: :button %>
+  </footer>
+<% end -%>

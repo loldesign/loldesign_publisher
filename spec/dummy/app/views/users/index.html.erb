@@ -1,6 +1,6 @@
-<%= title_page 'Título da Página', show: root_path, save: root_path  %>
+<%= title_page 'Título da Página' %>
 
-<%= add_resource 'Add Novo', root_path %>
+<%= add_resource 'Add Novo', new_user_path %>
 
 <table class='table-page'>
   <thead>
@@ -23,7 +23,7 @@
       <td><%= check_box :user, :active %></td>
       <td>
         <%= edit_resource   root_path %>
-        <%= remove_resource root_path %>
+        <%= remove_resource(root_path, {})%>
       </td>
     </tr>
     <% end -%>
