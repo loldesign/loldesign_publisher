@@ -1,0 +1,12 @@
+@import "base";
+
+.btn.show{
+  @include grid(2);
+  height: 20px;
+  line-height: 18px;
+  
+  a{
+    font-size: 12px;
+    padding: 0px;
+  }
+}
