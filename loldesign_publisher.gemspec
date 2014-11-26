@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 4.1.0"
   s.add_dependency "modernizr-rails", "~> 2.7.1"
   s.add_dependency "sass-rails", "~> 4.0.3"
+  s.add_dependency "simple_form", "~> 3.0"
   s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"

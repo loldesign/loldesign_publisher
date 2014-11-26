@@ -2,6 +2,7 @@ require 'loldesign_publisher/version'
 require 'jquery-rails'
 require 'sass-rails'
 require 'modernizr-rails'
+require 'simple_form'
 
 require "loldesign_publisher/engine"
 
