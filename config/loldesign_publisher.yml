@@ -1,14 +1,12 @@
 paths:
-  logo:   'loldesign_publisher/logo.png'
-  logout: 'javadcript://'
+  logo:   'loldesign_publisher/logo.svg'
+  logout: 'javascript://'
 
   menu_links:
     banners:   
-      name:'Banner Home'
-      path: 'javascript://'
+      name: 'Banner Home'
+      path: users_path
     recipes:
       name: 'Receitas'
-      path: 'javascript://'
     schedules: 
       name: 'Agenda / Cursos'
-      path: 'javascript://'
