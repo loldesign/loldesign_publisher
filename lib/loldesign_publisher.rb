@@ -4,8 +4,6 @@ require 'sass-rails'
 require 'modernizr-rails'
 require 'simple_form'
 
-require "loldesign_publisher/engine"
-
 module LoldesignPublisher
   class << self
     attr_accessor :config, :root_path
@@ -20,5 +18,8 @@ module LoldesignPublisher
       logout:         config[:paths]['logout'],
       menu_links:     config[:paths]['menu_links']
     }
+
+  rescue Exception
+    puts '[WARNING] run: bundle exec rails g initializer' 
   end
 end
