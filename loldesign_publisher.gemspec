@@ -7,11 +7,11 @@ require "loldesign_publisher/version"
 Gem::Specification.new do |s|
   s.name        = "loldesign_publisher"
   s.version     = LoldesignPublisher::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of LoldesignPublisher."
-  s.description = "TODO: Description of LoldesignPublisher."
+  s.authors     = ["Eduardo Zaghi", "Marco Singer", "Fernando Fujie"]
+  s.email       = ["eduardo@loldesign.com.br", "marco@loldesign.com.br", "fernando@loldesign.com.br"]
+  s.homepage    = "http://www.loldesign.com.br"
+  s.summary     = "Loldesign Publisher Gem"
+  s.description = "It's help us to develop the publisher area os our projects."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib,public}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
