@@ -1,5 +1,4 @@
-class UsersController < ApplicationController
-  layout 'loldesign_publisher/publisher'
+class UsersController < LoldesignPublisher::PublisherController
   
   def new
     @user = User.new
