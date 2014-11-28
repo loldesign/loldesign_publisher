@@ -1,4 +1,4 @@
-# require 'generators/loldesign_publisher/install_generator'
+require 'generators/loldesign_publisher/install_generator'
 
 module LoldesignPublisher
   module Rails
