@@ -3,6 +3,7 @@ require 'jquery-rails'
 require 'sass-rails'
 require 'modernizr-rails'
 require 'simple_form'
+require 'loldesign_publisher/engine'
 
 module LoldesignPublisher
   class << self
@@ -23,3 +24,4 @@ module LoldesignPublisher
     puts '[WARNING] run: bundle exec rails g initializer' 
   end
 end
+

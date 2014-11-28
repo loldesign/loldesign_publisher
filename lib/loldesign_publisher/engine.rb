@@ -1,5 +1,3 @@
-require 'generators/loldesign_publisher/install_generator'
-
 module LoldesignPublisher
   module Rails
     class Engine < ::Rails::Engine
