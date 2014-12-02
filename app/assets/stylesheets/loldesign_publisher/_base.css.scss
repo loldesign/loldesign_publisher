@@ -42,7 +42,7 @@ $z-index-high:   1000;
   font-size: #{$size/$font_size_base}em;
 }
 
-@mixin container($width:960px){
+@mixin container($width:1056px){
   width: $width;
   margin: auto;
   @include clearfix;

@@ -12,7 +12,7 @@ Grid.elements = function(){
   }).css({
     marginLeft: 'auto',
     marginRight: 'auto',
-    width: '960px'
+    width: '1056px'
   });
 
   var grid_element = $('<div>', {
