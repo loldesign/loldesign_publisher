@@ -12,7 +12,8 @@ form{
       @include alpha;
     }
     article:nth-child(3){
-      @include grid(8);
+      @include grid(9);
+      @include push(1);
       @include omega;
     }
   }
@@ -23,8 +24,10 @@ form{
     }
     article:nth-child(3){
       @include grid(5);
+      @include push(1);
     }
     article:nth-child(4){
+      @include push(2);
       @include grid(4);
       @include omega;
     }
@@ -83,11 +86,11 @@ form{
 
     .btn.save{
       @include alpha;
-      @include push(5);
+      @include push(6);
     }
 
     .btn.remove{
-      @include push(5);
+      @include push(6);
     }
   }
 }

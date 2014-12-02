@@ -1,4 +1,5 @@
 class UsersController < LoldesignPublisher::PublisherController
+# class UsersController < ApplicationController
   
   def new
     @user = User.new
