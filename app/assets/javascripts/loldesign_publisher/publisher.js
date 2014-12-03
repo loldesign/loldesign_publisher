@@ -1,4 +1,5 @@
-// = require ./libs/jquery-2.0.2.min
+//= require jquery
+//= require jquery_ujs
 //= require modernizr
 //= require ./libs/gumby
 //= require ./libs/ui/gumby.retina
