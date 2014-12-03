@@ -14,3 +14,28 @@
 //= require ./libs/gumby.init
 //= require ./plugins.js
 //= require ./main.js
+
+jQuery(document).ready(function($) {
+  new saveBtnManager();
+});
+
+var saveBtnManager = function(){
+  var _this       = this;
+  this.$container = $('.btn.save');
+
+  this.startup = function(){
+    if(!this.$container[0]){ return false; }
+    
+    this.$container.on('click', 'a', function(event) {
+      event.preventDefault();
+      
+      _this.submitForm();
+    });
+  },
+
+  this.submitForm = function(){
+    $('form').submit();
+  }
+
+  this.startup();
+}
