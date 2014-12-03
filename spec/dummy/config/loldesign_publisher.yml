@@ -3,8 +3,8 @@ paths:
   logout: 'javascript://'
 
   menu_links:
-    banners:   
-      name: 'Banner Home'
+    users:   
+      name: 'Usuários'
       path: users_path
     recipes:
       name: 'Receitas'

@@ -45,9 +45,16 @@ module LoldesignPublisher
 
     def nav_main_link(key)
       link_name = LoldesignPublisher.config[:menu_links][key]['name']
-      link_path = LoldesignPublisher.config[:menu_links][key]['path'].present? ? send(LoldesignPublisher.config[:menu_links][key]['path']) : 'javascript://'
 
-      link_to link_name, link_path
+      if LoldesignPublisher.config[:menu_links][key]['path'].present?
+        link_path = send(LoldesignPublisher.config[:menu_links][key]['path'])
+        options   = {data: {active: current_page?(controller: key)}}
+      else
+        link_path = 'javascript://'
+        options   = {}
+      end
+      
+      link_to link_name, link_path, options
     end
 
     private
