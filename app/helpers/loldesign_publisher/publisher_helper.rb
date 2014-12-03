@@ -57,6 +57,12 @@ module LoldesignPublisher
       link_to link_name, link_path, options
     end
 
+    def display_list_for(resources, options={})
+      total_fields = options[:fields] || 2
+      
+      render(resources) || render(partial: '/layouts/loldesign_publisher/modules/td_not_found', locals: {colspan: total_fields})
+    end
+
     private
     def gumby_icon(icon_name)
       content_tag :i, '', class: "icon-#{icon_name}"

@@ -5,27 +5,11 @@
 <table class='table-page'>
   <thead>
     <tr>
-      <th>Título</th>
-      <th>Próx. Data</th>
-      <th>Outras Data</th>
-      <th>Tipo</th>
-      <th>Ativo</th>
+      <th>Name</th>
       <th>&nbsp;</th>
     </tr>
   </thead>
   <tbody>
-    <% 5.times do%>
-    <tr>
-      <td>Raw food (s/ glúten, s/ lactose, vegano)</td>
-      <td>18/09/2014</td>
-      <td>20/09/2014</td>
-      <td>Curso</td>
-      <td><%= check_box :user, :active %></td>
-      <td>
-        <%= edit_resource   root_path %>
-        <%= remove_resource(root_path, {})%>
-      </td>
-    </tr>
-    <% end -%>
+    <%= display_list_for(@users, fields: 2) %>
   </tbody>
 </table>
