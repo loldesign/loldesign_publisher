@@ -75,6 +75,12 @@ form{
         @include alpha;
       }
     }
+
+    span.error {
+      font-size: 12px;
+      font-weight: $normal;
+      color: red;
+    }
   }
 
   footer{
