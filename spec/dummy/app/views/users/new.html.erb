@@ -12,8 +12,8 @@
     <%= f.input :description, label: false, placeholder: 'Descrição' %>
   </article>
   <article>
-    <%= f.input :name, label: false, placeholder: 'Nome' %>
-    <%= f.input :email, label: false, placeholder: 'E-mail' %>
+    <%= f.input :name, label: false, placeholder: 'Data', input_html: {class: 'date'}%>
+    <%= f.input :name, label: false, placeholder: 'CPF', input_html: {class: 'cpf'} %>
   </article>
   
   <footer>

@@ -1,6 +1,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require modernizr
+//= require ./libs/jquery.mask.min.js
 //= require ./libs/gumby
 //= require ./libs/ui/gumby.retina
 //= require ./libs/ui/gumby.fixed
@@ -17,6 +18,7 @@
 
 jQuery(document).ready(function($) {
   new saveBtnManager();
+  new formatForm();
 });
 
 var saveBtnManager = function(){
@@ -37,5 +39,22 @@ var saveBtnManager = function(){
     $('form').submit();
   }
 
+  this.startup();
+}
+
+var formatForm = function(){
+  var that    = this;
+  this.$form  = $('form');
+  
+  this.startup = function(){
+    if(!this.$form[0]){ return false; }
+
+    this.$form.find('input.tel').mask("(099) 9999-9999?9");
+    this.$form.find('input.cep').mask("99999-999");
+    this.$form.find('input.cpf').mask("999.999.999-99");
+    this.$form.find('input.hour').mask("99:99");
+    this.$form.find('input.date').mask("99/99/9999");
+  }
+  
   this.startup();
 }
