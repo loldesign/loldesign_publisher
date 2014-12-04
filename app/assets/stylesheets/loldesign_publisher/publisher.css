@@ -2,4 +2,5 @@
  *= require ./gumby.css
  *= require_tree ./layouts
  *= require_tree ./modules
+ *= require loldesign_publisher/override_publisher
  */
