@@ -14,5 +14,9 @@ module LoldesignPublisher
     def copy_override_css
       copy_file 'override_publisher.css.scss', 'app/assets/stylesheets/loldesign_publisher/override_publisher.css.scss'
     end
+
+    def copy_publisher_js
+      copy_file 'publisher_rails_app.js', 'app/assets/javascripts/loldesign_publisher/publisher_rails_app.js'
+    end
   end
 end 
