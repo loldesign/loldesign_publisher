@@ -1,0 +1,13 @@
+@import "loldesign_publisher/base";
+
+.btn.cancel{
+  @include grid(2);
+  height: 27px;
+  line-height: 25px;
+  // background-image: linear-gradient(#3ca957, #053611);
+  
+  a{
+    font-size: 12px;
+    padding: 0px;
+  }
+}

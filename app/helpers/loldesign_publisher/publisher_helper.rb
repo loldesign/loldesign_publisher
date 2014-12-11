@@ -31,6 +31,12 @@ module LoldesignPublisher
       end
     end
 
+    def cancel_action(path=:back)
+      content_tag :div, class: 'pretty medium info btn cancel' do
+        link_to 'Cancelar', path
+      end
+    end
+
     def save_resource(text, path)
       content_tag :div, class: 'pretty medium secondary btn save' do
         link_to text, path

@@ -90,12 +90,11 @@ form{
     border-top: 1px solid $footer-border-color;
     padding-top: 20px;
 
-    .btn.save{
-      @include alpha;
-      @include push(6);
-    }
+    .btn{
+      &:first-child{
+        @include alpha;
+      }
 
-    .btn.remove{
       @include push(6);
     }
   }
