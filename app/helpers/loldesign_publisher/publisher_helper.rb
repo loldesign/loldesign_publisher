@@ -48,7 +48,7 @@ module LoldesignPublisher
 
       if LoldesignPublisher.config[:menu_links][key]['path'].present?
         link_path = send(LoldesignPublisher.config[:menu_links][key]['path'])
-        options   = {data: {active: current_page?(controller: key)}}
+        options   = {data: {active: controller_name == key}}
       else
         link_path = 'javascript://'
         options   = {}
