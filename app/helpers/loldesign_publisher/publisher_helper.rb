@@ -39,7 +39,7 @@ module LoldesignPublisher
 
     def save_resource(text, path)
       content_tag :div, class: 'pretty medium secondary btn save' do
-        link_to text, path
+        link_to text, path, data: {disable_with: '...'}
       end
     end
 
