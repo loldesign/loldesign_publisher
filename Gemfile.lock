@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    loldesign_publisher (0.0.1)
+    loldesign_publisher (1.0.0)
       jquery-rails
       modernizr-rails (~> 2.7.1)
       rails (~> 4.1.0)
