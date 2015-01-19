@@ -7,7 +7,6 @@
 //= require ./libs/ui/gumby.fixed
 //= require ./libs/ui/gumby.skiplink
 //= require ./libs/ui/gumby.toggleswitch
-//= require ./libs/ui/gumby.checkbox
 //= require ./libs/ui/gumby.radiobtn
 //= require ./libs/ui/gumby.tabs
 //= require ./libs/ui/gumby.navbar
