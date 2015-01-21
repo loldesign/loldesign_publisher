@@ -14,10 +14,6 @@ module LoldesignPublisher
                                                                                 }
     end
 
-    def method_name
-      
-    end
-
     def add_resource(text, path)
       render partial: '/layouts/loldesign_publisher/modules/add_resource', locals: {text: text, path: path}
     end
