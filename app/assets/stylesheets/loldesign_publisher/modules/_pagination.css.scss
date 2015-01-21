@@ -1,0 +1,64 @@
+@import "loldesign_publisher/base";
+
+//colors
+$color_silver_chalice_approx: #aaaaaa;
+$color_alto_approx: #dddddd;
+$color_science_blue_approx: #0063dc;
+$midnight_blue: #003366;
+$white: white;
+
+//@extend-elements
+//original selectors
+//.pagination a:hover, .pagination a:focus
+%extend_1 {
+  border-color: $gray-main;
+  background: $gray-main;
+  color: $white;
+}
+
+
+.pagination {
+  text-align: center;
+  padding: 0.3em;
+  cursor: default;
+  font-size: 12px;
+  a {
+    padding: 0.2em 0.5em;
+    border: 1px solid $color_alto_approx;
+    color: $gray-main;
+    text-decoration: none;
+
+    &:hover {
+      @extend %extend_1;
+    }
+    &:focus {
+      @extend %extend_1;
+    }
+  }
+  span {
+    padding: 0.2em 0.5em;
+  }
+  em {
+    padding: 0.2em 0.5em;
+  }
+  .disabled {
+    color: $color_silver_chalice_approx;
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    color: $gray-main;
+  }
+  .page_info {
+    color: $color_silver_chalice_approx;
+    padding-top: 0.8em;
+  }
+  .previous_page {
+    border-width: 2px;
+    margin-right: 1em;
+  }
+  .next_page {
+    border-width: 2px;
+    margin-left: 1em;
+  }
+}
