@@ -11,6 +11,7 @@ table.table-page{
       font-size: 14px;
       font-weight: $normal;
       padding: 5px 10px;
+      vertical-align: middle;
     }
   }
   tbody{
@@ -18,7 +19,8 @@ table.table-page{
       font-size: 12px;
       font-weight: $normal;
       border-bottom: 1px solid #e5e5e5;
-
+      vertical-align: middle;
+      
       &.not-found{
         text-align: center;
       }
