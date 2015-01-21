@@ -1,0 +1,8 @@
+<section class='filter-box'>
+  <%= form_tag('javascript://', method: :get) do%>
+    <%= text_field_tag 'query[from]', params[:query].present? ? params[:query][:from] : '', placeholder: 'De:' , data: {'date-format' => "DD/MM/YYYY"}, class: 'datepicker'%>
+    <%= text_field_tag 'query[to]'  , params[:query].present? ? params[:query][:to] : ''  , placeholder: 'Até:', data: {'date-format' => "DD/MM/YYYY"}, class: 'datepicker'%>
+    
+    <%= submit_tag 'Filtrar', 'data-disable-with' => '...' %>
+  <% end -%>   
+</section>

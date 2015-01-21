@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/datepicker
 //= require modernizr
+//= require ./libs/datepicker-pt-BR.js
 //= require ./libs/jquery.mask.min.js
 //= require ./libs/gumby
 //= require ./libs/ui/gumby.retina
@@ -54,6 +56,7 @@ var formatForm = function(){
     this.$form.find('input.cpf').mask("999.999.999-99");
     this.$form.find('input.hour').mask("99:99");
     this.$form.find('input.date').mask("99/99/9999");
+    this.$form.find('.datepicker').datepicker();
   }
   
   this.startup();

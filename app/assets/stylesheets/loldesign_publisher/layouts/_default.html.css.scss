@@ -9,3 +9,7 @@
   @include push(1);
   margin-top: 30px;
 }
+
+.ui-datepicker{
+  width: inherit !important;
+}

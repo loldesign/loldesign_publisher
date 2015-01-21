@@ -1,5 +1,6 @@
 require 'loldesign_publisher/version'
 require 'jquery-rails'
+require 'jquery-ui-rails'
 require 'sass-rails'
 require 'modernizr-rails'
 require 'simple_form'
