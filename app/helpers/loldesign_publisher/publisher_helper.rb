@@ -40,9 +40,13 @@ module LoldesignPublisher
       end
     end
 
-    def cancel_action(path=:back)
+    def cancel_action(path='javascript://')
+      default_button('Cancelar', path)      
+    end
+
+    def default_button(text, path='javascript://')
       content_tag :div, class: 'pretty medium info btn cancel' do
-        link_to 'Cancelar', path
+        link_to text, path
       end
     end
 
