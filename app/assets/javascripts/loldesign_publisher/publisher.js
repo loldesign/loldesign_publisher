@@ -54,6 +54,7 @@ var formatForm = function(){
     this.$form.find('input.tel').mask("(099) 9999-9999?9");
     this.$form.find('input.cep').mask("99999-999");
     this.$form.find('input.cpf').mask("999.999.999-99");
+    this.$form.find('input.cnpj').mask("99.999.999/9999-99");
     this.$form.find('input.hour').mask("99:99");
     this.$form.find('input.date').mask("99/99/9999");
     this.$form.find('.datepicker').datepicker();
