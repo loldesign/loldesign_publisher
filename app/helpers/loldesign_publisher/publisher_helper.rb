@@ -56,6 +56,12 @@ module LoldesignPublisher
       end
     end
 
+    def submit_button(form, text='Salvar')
+      content_tag :div, class: 'pretty medium secondary btn save' do
+        form.submit 'Salvar', data: {'disable-with' => '...'}
+      end
+    end
+
     def show_resource(text, path)
       content_tag :div, class: 'pretty medium default btn show' do
         link_to text, path
