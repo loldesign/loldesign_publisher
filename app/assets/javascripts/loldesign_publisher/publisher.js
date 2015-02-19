@@ -16,6 +16,7 @@
 //= require ./libs/gumby.init
 //= require ./plugins.js
 //= require ./main.js
+//= require ./activable.js
 //= require loldesign_publisher/publisher_rails_app.js
 
 jQuery(document).ready(function($) {

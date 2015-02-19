@@ -1,5 +1,6 @@
 <tr>
   <td><%= user.name %></td>
+  <td><%= activable_field_for(user) %></td>
   <td>
     <%= edit_resource   root_path %>
     <%= remove_resource(root_path, {})%>

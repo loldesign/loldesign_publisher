@@ -88,6 +88,11 @@ module LoldesignPublisher
       render(resources) || render(partial: '/layouts/loldesign_publisher/modules/td_not_found', locals: {colspan: total_fields})
     end
 
+    def activable_field_for(resource, options={})
+      klass = options[:klass] || resource.class.to_s
+      check_box_tag resource, :active, resource.active, data: {resource: klass, id: resource.id}, class: 'activable'
+    end
+
     private
     def gumby_icon(icon_name)
       content_tag :i, '', class: "icon-#{icon_name}"

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users
+
+  mount LoldesignPublisher::Rails::Engine => '/'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
