@@ -1,0 +1,40 @@
+@import "loldesign_publisher/base";
+
+.show-resource{
+  @include clearfix;
+  margin-top: 20px;
+
+  p{
+    font-size: 12px;
+    
+    strong{
+      display: block;
+    }
+
+    a{
+      color: $gray-main;
+      text-decoration: underline;
+    }
+  }
+
+  &.two-columns{
+    article:first-child{
+      @include grid(8);
+      @include alpha;
+    }
+    article:nth-child(2){
+      @include grid(9);
+      @include omega;
+    }
+
+    footer{
+      @include grid(17);
+      @include alpha;
+
+      .btn.cancel{
+        @include push(7);
+        @include alpha;
+      }
+    }
+  }
+}
