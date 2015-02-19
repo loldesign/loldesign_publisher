@@ -18,5 +18,9 @@ module LoldesignPublisher
     def copy_publisher_js
       copy_file 'publisher_rails_app.js', 'app/assets/javascripts/loldesign_publisher/publisher_rails_app.js'
     end
+
+    def add_route
+      route "mount LoldesignPublisher::Rails::Engine => '/'"
+    end
   end
 end 
