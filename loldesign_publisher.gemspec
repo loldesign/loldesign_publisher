@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["eduardo@loldesign.com.br", "marco@loldesign.com.br", "fernando@loldesign.com.br"]
   s.homepage    = "http://www.loldesign.com.br"
   s.summary     = "Loldesign Publisher Gem"
-  s.description = "It's help us to develop the publisher area os our projects."
+  s.description = "It's help us to develop publisher area on our projects."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib,public}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
