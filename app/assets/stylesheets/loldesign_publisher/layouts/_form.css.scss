@@ -6,30 +6,34 @@ $footer-border-color: #808284;
 form{
   margin-top: 20px;
 
-  &.two-columns{
-    article:nth-child(2){
-      @include grid(7);
-      @include alpha;
-    }
-    article:nth-child(3){
-      @include grid(9);
-      @include push(1);
-      @include omega;
+  .two-columns{
+    article.column{
+      &:nth-child(1){
+        @include grid(7);
+        @include alpha;
+      }
+      &:nth-child(2){
+        @include grid(9);
+        @include push(1);
+        @include omega;
+      }
     }
   }
-  &.three-columns{
-    article:nth-child(2){
-      @include grid(6);
-      @include alpha;
-    }
-    article:nth-child(3){
-      @include grid(5);
-      @include push(1);
-    }
-    article:nth-child(4){
-      @include push(2);
-      @include grid(4);
-      @include omega;
+  .three-columns{
+    article.column{
+      &:nth-child(1){
+        @include grid(6);
+        @include alpha;
+      }
+      &:nth-child(2){
+        @include grid(5);
+        @include push(1);
+      }
+      &:nth-child(3){
+        @include push(2);
+        @include grid(4);
+        @include omega;
+      }
     }
   }
 
