@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head><title></title>
+  <meta charset="UTF-8">
+  </head>
+  <body><table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table">
+  <tbody><tr>
+    <td align="center" bgcolor="#ececec">
+          <table class="w640" style="margin:0 10px;" width="640" cellpadding="0" cellspacing="0" border="0">
+              <tbody><tr><td class="w640" width="640" height="20"></td></tr>
+
+              <tr>
+                  <td class="w640" width="640">
+                        <table id="top-bar" class="w640" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f4f4">
+    <tbody><tr>
+        <td class="w15" width="15"></td>
+
+        <td class="w30" width="30"></td>
+        <td class="w255" width="255" valign="middle" align="right">
+            <table class="w255" width="255" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr><td class="w255" width="255" height="8"></td></tr>
+            </tbody></table>
+            <table cellpadding="0" cellspacing="0" border="0">
+    <tbody><tr>
+
+
+
+    </tr>
+</tbody></table>
+            <table class="w255" width="255" cellpadding="0" cellspacing="0" border="0">
+                <tbody><tr><td class="w255" width="255" height="8"></td></tr>
+            </tbody></table>
+        </td>
+        <td class="w15" width="15"></td>
+    </tr>
+</tbody></table>
+
+                    </td>
+                </tr>
+                <tr>
+                <td id="header" class="w640" width="640" align="center" bgcolor="#f4f4f4">
+
+    <div align="center" style="text-align: center width: 178px;margin: 10px 0px;">
+
+        <%= image_tag(LoldesignPublisher.config[:logo])%>
+
+    </div>
+
+
+</td>
+                </tr>
+
+                <tr><td class="w640" width="640" height="30" bgcolor="#ffffff"></td></tr>
+                <tr id="simple-content-row"><td class="w640" width="640" bgcolor="#ffffff">
+    <table class="w640" width="640" cellpadding="0" cellspacing="0" border="0">
+        <tbody><tr>
+            <td class="w30" width="30"></td>
+            <td class="w580" width="580">
+                <repeater>
+
+                    <layout label="Text only">
+                        <table class="w580" width="580" cellpadding="0" cellspacing="0" border="0">
+                            <tbody><tr>
+                                <td class="w580" width="580">
+                                    <div align="left" class="article-content">
+                                      <h2><%= @title %></h2>
+                                      <% @extra_fields.each_key do |key| %>
+                                        <p>
+                                          <strong><%= "#{key}:" %></strong><br/>
+                                          <%= @extra_fields[key] %>
+                                        </p>
+                                      <% end -%>
+                                      <p>
+                                        <strong>Mensagem:</strong> <br/>
+                                        <%= @message %>
+                                      </p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr><td class="w580" width="580" height="10"></td></tr>
+                        </tbody></table>
+                    </layout>
+
+                </repeater>
+            </td>
+            <td class="w30" width="30"></td>
+        </tr>
+    </tbody></table>
+</td></tr>
+                <tr><td class="w640" width="640" height="15" bgcolor="#ffffff"></td></tr>
+
+                <tr>
+                <td class="w640" width="640">
+    <table id="footer" class="w640" width="640" cellpadding="0" cellspacing="0" border="0" bgcolor="#b2b2b2">
+        <tbody>
+
+        <tr><td class="w30" width="30"></td><td class="w580 h0" width="360" height="15"></td><td class="w0" width="60"></td><td class="w0" width="160"></td><td class="w30" width="30"></td></tr>
+    </tbody></table>
+</td>
+                </tr>
+                <tr><td class="w640" width="640" height="60"></td></tr>
+            </tbody></table>
+        </td>
+  </tr>
+</tbody></table>
+</body></html>
