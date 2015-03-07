@@ -10,3 +10,5 @@ paths:
       name: 'Receitas'
     schedules: 
       name: 'Agenda / Cursos'
+
+page_title: 'Loldesign Publisher | Dummy App'

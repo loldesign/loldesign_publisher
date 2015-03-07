@@ -18,7 +18,8 @@ module LoldesignPublisher
     self.config = {
       logo:           config[:paths]['logo'],
       logout:         config[:paths]['logout'],
-      menu_links:     config[:paths]['menu_links']
+      menu_links:     config[:paths]['menu_links'],
+      page_title:     config[:page_title]
     }
 
   rescue Exception
