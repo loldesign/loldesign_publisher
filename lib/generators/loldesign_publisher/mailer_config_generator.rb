@@ -13,7 +13,7 @@ module LoldesignPublisher
     }
 
     def create_config
-      environment   = get_answer_for(value: :env       , question: "Which environment would yu like to set?", ask_options: {limited_to: ["development", "production", "test"]})
+      environment   = get_answer_for(value: :env       , question: "Which environment would you like to set?", ask_options: {limited_to: ["development", "production", "test"]})
       smtp_address  = get_answer_for(value: :smtp      , question: "Whats the STMP addres? ex. smtp.sendgrid.net :")
       port_number   = get_answer_for(value: :port      , question: "What's port number? ex. 587 :")
       user_name     = get_answer_for(value: :user_name , question: "What's your user_name?")
