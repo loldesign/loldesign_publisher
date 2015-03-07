@@ -8,28 +8,31 @@ module LoldesignPublisher
       password:       'f8ks256$',
       domain:         'heroku.com',
       authentication: :plain,
-      env:            :development
+      env:            :development,
+      asset_host:     'http://www.loldesign.com.br/'
     }
 
     def create_config
-      environment   = get_answer_for(value: :env      , question: "Which environment would yu like to set?", ask_options: {limited_to: ["development", "production", "test"]})
-      smtp_address  = get_answer_for(value: :smtp     , question: "Whats the STMP addres? ex. smtp.sendgrid.net :")
-      port_number   = get_answer_for(value: :port     , question: "What's port number? ex. 587 :")
-      user_name     = get_answer_for(value: :user_name, question: "What's your user_name?")
-      password      = get_answer_for(value: :password , question: "What's your password?", ask_options: {echo: false})
+      environment   = get_answer_for(value: :env       , question: "Which environment would yu like to set?", ask_options: {limited_to: ["development", "production", "test"]})
+      smtp_address  = get_answer_for(value: :smtp      , question: "Whats the STMP addres? ex. smtp.sendgrid.net :")
+      port_number   = get_answer_for(value: :port      , question: "What's port number? ex. 587 :")
+      user_name     = get_answer_for(value: :user_name , question: "What's your user_name?")
+      password      = get_answer_for(value: :password  , question: "What's your password?", ask_options: {echo: false})
       puts ' '
-      domain        = get_answer_for(value: :domain   , question: "What's the domain name? ex. heroku.com :")
+      domain        = get_answer_for(value: :domain    , question: "What's the domain name? ex. heroku.com :")
+      asset_host    = get_answer_for(value: :asset_host, question: "Whats's the asset_host?")
 
       inject_into_file "config/environments/#{environment}.rb", :before => /^end/ do
         "\n  # MAILER CONFIG \n" +
-        "  config.action_mailer.delivery_method = :smtp \n" +
-        "  config.action_mailer.smtp_settings = { \n"       +
-        "  :address        => '#{smtp_address}',\n"         +
-        "  :port           => '#{port_number}', \n"         +
-        "  :authentication => :plain, \n"                   +
-        "  :user_name      => '#{user_name}', \n"           +
-        "  :password       => '#{password}', \n"            +
-        "  :domain         => '#{domain}' \n"               +
+        "  config.action_mailer.asset_host = '#{asset_host}' \n" +
+        "  config.action_mailer.delivery_method = :smtp \n"      +
+        "  config.action_mailer.smtp_settings = { \n"            +
+        "  :address        => '#{smtp_address}',\n"              +
+        "  :port           => '#{port_number}', \n"              +
+        "  :authentication => :plain, \n"                        +
+        "  :user_name      => '#{user_name}', \n"                +
+        "  :password       => '#{password}', \n"                 +
+        "  :domain         => '#{domain}' \n"                    +
         "  } \n"
       end
     end
