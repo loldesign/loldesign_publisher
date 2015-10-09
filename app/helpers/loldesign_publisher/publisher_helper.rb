@@ -58,7 +58,7 @@ module LoldesignPublisher
 
     def submit_button(form, text='Salvar')
       content_tag :div, class: 'pretty medium secondary btn save' do
-        form.submit 'Salvar', data: {'disable-with' => '...'}
+        form.submit text, data: {'disable-with' => '...'}
       end
     end
 
