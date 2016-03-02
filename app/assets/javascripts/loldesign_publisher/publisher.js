@@ -1,7 +1,7 @@
+//= require ./libs/modernizr-2.6.2.min.js
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui/datepicker
-//= require modernizr
 //= require ./libs/datepicker-pt-BR.js
 //= require ./libs/jquery.mask.min.js
 //= require ./libs/gumby
