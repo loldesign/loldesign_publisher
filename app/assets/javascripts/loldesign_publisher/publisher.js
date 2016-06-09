@@ -30,10 +30,10 @@ var saveBtnManager = function(){
 
   this.startup = function(){
     if(!this.$container[0]){ return false; }
-    
+
     this.$container.on('click', 'a', function(event) {
       event.preventDefault();
-      
+
       _this.submitForm();
     });
   },
@@ -48,11 +48,11 @@ var saveBtnManager = function(){
 var formatForm = function(){
   var that    = this;
   this.$form  = $('form');
-  
+
   this.startup = function(){
     if(!this.$form[0]){ return false; }
 
-    this.$form.find('input.tel').mask("(099) 9999-9999?9");
+    this.$form.find('input.tel').mask("(099) 9?9999-9999");
     this.$form.find('input.cep').mask("99999-999");
     this.$form.find('input.cpf').mask("999.999.999-99");
     this.$form.find('input.cnpj').mask("99.999.999/9999-99");
@@ -60,6 +60,6 @@ var formatForm = function(){
     this.$form.find('input.date').mask("99/99/9999");
     this.$form.find('.datepicker').datepicker();
   }
-  
+
   this.startup();
 }
