@@ -21,7 +21,7 @@ Run the above command make available the function that allows
 to inherit controllers of LoldesignPublisher::PublisherController to
 the use of view.
 ---
-=== Customize the Right Menu
+=== Customize the Left Menu
 Will be available in the config folder the file: +loldesign_publisher.yml+
 
 This file contains the following code:
@@ -56,9 +56,17 @@ This file contains the following code:
 Add to controller:
  class NameOfController < LoldesignPublisher::PublisherController
 ---
-=== Helpers
- title_page "Title of Page"
+== Helpers
+=== Building Index Page
+* Title
+ <%= title_page "Title of Page" %>
 	It is a function that takes a string as a parameter, a string is automatically formatted and aligned as the title of the page in question.
+* Subtitle
+ subtitle: 'Subtitle of Page'
+It's a minor title. It should be added in the same line as the title page, and separated only by commas.
+* Add Resource
+ add_resource 'New Button', path_to_url
+---
 
  <table class='table-page'>
 	This HTML tag when added to any table, causes it to be automatically formatted, both the HTML and CSS.
