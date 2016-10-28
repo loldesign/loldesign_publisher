@@ -93,7 +93,6 @@ module LoldesignPublisher
       check_box_tag resource, :active, resource.active, data: {resource: klass, id: resource.id}, class: 'activable'
     end
 
-    private
     def gumby_icon(icon_name)
       content_tag :i, '', class: "icon-#{icon_name}"
     end
