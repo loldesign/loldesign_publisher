@@ -1,7 +1,7 @@
 = Loldesign Publisher
 
 == About
-The Loldesign Publisher gem has the feature to make changes to views in order to leave it more enjoyable, also providing a laterally administrative menu.
+Loldesign Publisher gem has the feature to make changes to views in order to leave it more enjoyable, also providing a laterally administrative menu.
 ---
 === Getting Started
 Open +Gemfile+ file and add gem to project:
@@ -11,9 +11,10 @@ Run command:
  $ bundle install
 ---
 === Installing
-+Loldesign Publisher+ gem depends on configuration files that are not automatically
-installed by default when you run the bundle install for
-of that you must run the following command to
++Loldesign Publisher+ gem depends of configuration files that are not automatically
+installed by default when you run the bundle install.
+
+You must run the following command to
 enable gem:
  rails generate loldesign_publisher:install
 
