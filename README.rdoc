@@ -18,9 +18,9 @@ You must run the following command to
 enable gem:
  rails generate loldesign_publisher:install
 
-Run the above command make available the function that allows
-to inherit controllers of LoldesignPublisher::PublisherController to
-the use of view.
+Run the command above to make available the function that allows
+to controllers inherit of LoldesignPublisher::PublisherController to
+the view use.
 ---
 === Customize the Left Menu
 Will be available in the config folder the file: +loldesign_publisher.yml+
