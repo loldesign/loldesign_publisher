@@ -3,12 +3,11 @@ paths:
   logout: 'javascript://'
 
   menu_links:
-    banners:   
-      name: 'Banner Home'
-      path: users_path
-    recipes:
-      name: 'Receitas'
-    schedules: 
-      name: 'Agenda / Cursos'
+    controller_01:   
+      name: 'link_01'
+      path: path_01_path
+    controller_02:
+      name: 'link 02'
+      path: path_02_path
 
 page_title: 'Loldesign Publisher'
