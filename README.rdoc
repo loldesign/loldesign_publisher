@@ -20,7 +20,7 @@ enable gem:
 
 Run the command above to make available the function that allows
 to controllers inherit of LoldesignPublisher::PublisherController to
-the view use.
+the views use.
 ---
 === Customize the Left Menu
 Will be available in the config folder the file: +loldesign_publisher.yml+
