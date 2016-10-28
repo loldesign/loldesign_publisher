@@ -26,7 +26,7 @@ module LoldesignPublisher
       link_to(path){ gumby_icon 'info-circled' }
     end
 
-    def remove_resource(path, options)
+    def remove_resource(path, options={})
       message = options[:message] || 'Você tem certeza que deseja remover?'
       type    = options[:type]    || :link
       text    = options[:text]    || 'Remover'
