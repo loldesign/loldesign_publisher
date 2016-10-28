@@ -82,6 +82,7 @@ https://bitbucket.org/loldesign/lol_crud_generator/src
 ---
 
 
+
 = LoldesignPublisher
 
 This project rocks and uses MIT-LICENSE.
