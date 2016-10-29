@@ -67,10 +67,20 @@ Add to controller:
 It's a minor title. It should be added in the same line as the title page, and separated only by commas.
 * Add Resource
  add_resource 'New Button', path_to_url
----
-
- <table class='table-page'>
-	This HTML tag when added to any table, causes it to be automatically formatted, both the HTML and CSS.
+This helper create a button that lead the User to the desired path
+* Implementing Table #1
+ <table class='table-page'> content of table </table>
+This HTML tag when added to any table, causes it to be automatically formatted, both the HTML and CSS.
+* Implementing Table #2
+ <%= display_list_for(@examples, fields: 5) %>
+This ruby code list every registration, separate by lines, the part of the code @examples renders the partial +_example.html.erb+ from the controller and need to have the same name as the controller.
+The parameter +fields+ with the number 5, is the number of fields in the table, even when there is not any, it merges the 5 existing columns or not, and displays the message "No records found".
+* Implement Table #3 (partial)
+Using the example given above.
+Creates a button to edit the record
+ <%= edit_resource edit_example_path(example) %>
+Creates a button to remove the record
+ <%= remove_resource(example_path(example), {})%>
 ---
 contiuar
 loldesign_publisher:install
