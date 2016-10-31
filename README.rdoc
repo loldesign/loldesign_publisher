@@ -82,6 +82,46 @@ Creates a button to edit the record
 Creates a button to remove the record
  <%= remove_resource(example_path(example), {})%>
 ---
+== Examples
+These examples below uses the model establishment, and address the helper listed above previously
+ ---Index.html.erb---
+ <%= title_page 'Estabelecimentos' %>
+ <%= add_resource 'Novo Estabelecimento', new_admin_establishment_path %>
+
+ <%= render partial: 'filters' %>
+
+ <table class='table-page'>
+   <thead>
+     <tr>
+       <th>Nome Fantasia</th>
+       <th>Situação</th>
+       <th>Tipo de Estabelecimento</th>
+       <th>Condição</th>
+       <th>&nbsp;</th>
+     </tr>
+   </thead>
+
+   <tbody>
+     <%= display_list_for(@establishments, fields: 5) %>
+   </tbody>
+ </table>
+
+ <%= will_paginate @establishments %>
+ 
+---
+ ---_establishment.html.erb---
+ <tr class="<%= !establishment.status ? 'selected' : ''%>">
+   <td><%= link_to establishment.fantasy_name, edit_admin_establishment_path(establishment), :class => "list-edit" %></td>
+   <td><%= establishment.status_text %></td>
+   <td><%= establishment.establishment_type_text %></td>
+   <td><%= establishment.aasm.human_state %></td>
+   <td>
+     <%= edit_resource edit_admin_establishment_path(establishment) %>
+     <%= remove_resource(admin_establishment_path(establishment), {})%>
+   </td>
+ </tr>
+
+---
 contiuar
 loldesign_publisher:install
 loldesign_publisher:mailer_config
