@@ -82,8 +82,8 @@ Creates a button to edit the record
 Creates a button to remove the record
  <%= remove_resource(example_path(example), {})%>
 ---
-== Examples
-These examples below uses the model establishment, and address the helper listed above previously
+=== Examples
+These examples below uses the model establishment, and address the helper listed above previously.
  ---Index.html.erb---
  <%= title_page 'Estabelecimentos' %>
  <%= add_resource 'Novo Estabelecimento', new_admin_establishment_path %>
@@ -120,14 +120,68 @@ These examples below uses the model establishment, and address the helper listed
      <%= remove_resource(admin_establishment_path(establishment), {})%>
    </td>
  </tr>
-
 ---
-contiuar
-loldesign_publisher:install
-loldesign_publisher:mailer_config
+== Building _form.html.erb
+In the _form.html.erb we create a formulary with two or three columns, as we put the fields to be filled.
+* simple_form_for
+Within this ruby code goes all the contents of the form
+ <%= simple_form_for @establishment do |f| %>
+   content of form
+ <% end %>
+ 
+* Section with two or three columns
+Within this html tag goes article and fields necessary for the construction of _form.
+ <section class='three-columns'>
+   content of section
+ </section>
+ 
+* Articles
+Each article is one of the columns created by section
+ <article class='column'>
+   fields of the form
+ </article>
+ 
+* Footer
+The footer creates two buttons one to save and one to cancel the session.
+ <footer>
+   <%= submit_button f %>
+   <%= cancel_action :back %>
+ </footer>
+---
+=== Examples
+Here is an code with the examples above:
+
+ <%= simple_form_for @user do |f| %>
+   <section class='three-columns'>
+     <article class='column'>
+       <%= f.input :name, label: false, placeholder: 'Nome' %>
+       <%= f.input :email, label: false, placeholder: 'E-mail' %>
+       <%= f.input :password, label: false, placeholder: 'Senha', input_html: {class: 'small'} %>
+       <%= f.input :active, label: 'Ativo' %>
+     </article>
+     <article class='column'>
+       <%= f.input :description, label: false, placeholder: 'Descrição' %>
+     </article>
+     <article class='column'>
+       <%= f.input :name, label: false, placeholder: 'Data', input_html: {class: 'date'}%>
+       <%= f.input :name, label: false, placeholder: 'CPF', input_html: {class: 'cpf'} %>
+     </article>
+   </section>  
+  
+   <footer>
+     <%= submit_button f %>
+     <%= cancel_action :back %>
+   </footer>
+ <% end -%>
+---
+contiuar: 
+loldesign_publisher:install / 
+loldesign_publisher:mailer_config / 
 loldesign_publisher:views
-endereços uteis
+---
+endereços uteis: 
 https://bitbucket.org/loldesign/loldesign_publisher/src/8aa1fd8d9650/app/?at=master
+---
 https://bitbucket.org/loldesign/lol_crud_generator/src
 ---
 
