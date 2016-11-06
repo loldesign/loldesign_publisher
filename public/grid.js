@@ -53,16 +53,16 @@ Grid.toggle = function(event){
   $('#grid_back').toggle();
 }
 
-$(document).ready(function(){
-  Grid();
-});
+// $(document).ready(function(){
+//   Grid();
+// });
 
-$(document).ready(function(){
-   $('#contact a').last().click(function(){
-    $(this).parent().hide();
-   })
+// $(document).ready(function(){
+//    $('#contact a').last().click(function(){
+//     $(this).parent().hide();
+//    })
 
-   $(document).keydown(function(e) {
-      if (e.keyCode == 27) { Grid.toggle(e) }
-  })
-});
+//    $(document).keydown(function(e) {
+//       if (e.keyCode == 27) { Grid.toggle(e) }
+//   })
+// });
