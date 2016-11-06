@@ -52,7 +52,7 @@ var formatForm = function(){
   this.startup = function(){
     if(!this.$form[0]){ return false; }
 
-    this.$form.find('input.tel').mask("(099) 9?9999-9999");
+    this.$form.find('input.tel').mask("(99) 9?9999-9999");
     this.$form.find('input.cep').mask("99999-999");
     this.$form.find('input.cpf').mask("999.999.999-99");
     this.$form.find('input.cnpj').mask("99.999.999/9999-99");
