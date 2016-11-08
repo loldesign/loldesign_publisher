@@ -40,7 +40,8 @@ module LoldesignPublisher
       end
     end
 
-    def cancel_action(path='javascript://')
+    def cancel_action(options={})
+      path = options[:path] || 'javascript://'
       default_button('Cancelar', path)      
     end
 
