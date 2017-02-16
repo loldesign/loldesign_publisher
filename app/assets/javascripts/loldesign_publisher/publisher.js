@@ -1,8 +1,8 @@
 //= require ./libs/modernizr-2.6.2.min.js
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/datepicker
-//= require ./libs/datepicker-pt-BR.js
+//= require jquery-ui/widgets/datepicker
+//= require jquery-ui/i18n/datepicker-pt-BR
 //= require ./libs/jquery.mask.min.js
 //= require ./libs/gumby
 //= require ./libs/ui/gumby.retina
