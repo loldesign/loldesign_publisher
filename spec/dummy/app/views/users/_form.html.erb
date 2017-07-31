@@ -1,17 +1,18 @@
-<%= simple_form_for @user do |f| %>
-  <section class='three-columns'>
-    <article class='column'>
-      <%= f.input :name, label: false, placeholder: 'Name' %>
-      <%= f.input :email, label: false, placeholder: 'E-mail' %>
-      <%= f.input :password, label: false, placeholder: 'Password', input_html: {class: 'small'} %>
+<%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
+  <section class='fields-wrapper two-columns'>
+    <header>
+      <h2>Cargo</h2>
+    </header>
+    <article>
+      <%= f.input :name, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :email , wrapper_html: {class: 'col-9'} %>
+      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :name, label: "Date", input_html: {class: 'date'}%>
+    </article>
+    <article>
+      <%= f.input :name, label: "CPF", input_html: {class: 'cpf'} %>
       <%= f.input :active, label: 'Active' %>
-    </article>
-    <article class='column'>
-      <%= f.input :description, label: false, placeholder: 'Description' %>
-    </article>
-    <article class='column'>
-      <%= f.input :name, label: false, placeholder: 'Date', input_html: {class: 'date'}%>
-      <%= f.input :name, label: false, placeholder: 'CPF', input_html: {class: 'cpf'} %>
+      <%= f.input :description%>
     </article>
   </section>
 
