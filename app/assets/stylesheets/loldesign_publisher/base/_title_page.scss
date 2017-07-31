@@ -1,9 +1,13 @@
 @import "loldesign_publisher/base";
+@import 'normalize-rails';
+@import 'bourbon';
+@import 'base/base';
+@import 'neat';
 
 header.title-page{
   @include clearfix;
   border-bottom: 1px dotted #000;
-  
+
   h2{
     font-size: 30px;
     @include grid(13);
