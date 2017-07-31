@@ -1,0 +1,22 @@
+<%= simple_form_for @user do |f| %>
+  <section class='three-columns'>
+    <article class='column'>
+      <%= f.input :name, label: false, placeholder: 'Name' %>
+      <%= f.input :email, label: false, placeholder: 'E-mail' %>
+      <%= f.input :password, label: false, placeholder: 'Password', input_html: {class: 'small'} %>
+      <%= f.input :active, label: 'Active' %>
+    </article>
+    <article class='column'>
+      <%= f.input :description, label: false, placeholder: 'Description' %>
+    </article>
+    <article class='column'>
+      <%= f.input :name, label: false, placeholder: 'Date', input_html: {class: 'date'}%>
+      <%= f.input :name, label: false, placeholder: 'CPF', input_html: {class: 'cpf'} %>
+    </article>
+  </section>
+
+  <footer>
+    <%= submit_button f %>
+    <%#= cancel_action :back %>
+  </footer>
+<% end -%>
