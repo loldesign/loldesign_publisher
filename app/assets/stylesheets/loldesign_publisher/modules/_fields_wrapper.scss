@@ -1,0 +1,190 @@
+@import "loldesign_publisher/base";
+
+$header-color: #8e8e8e;
+$background-color: #f5f5f5;
+$input-border-color: #d1d3d4;
+
+section.fields-wrapper{
+  background: #f5f5f5;
+  padding-bottom: 15px;
+  height: 100%;
+  margin-bottom: 25px;
+  @include span-columns(18 of 18);
+
+  header{
+    background: $header-color;
+
+    h2{
+      color: #fff;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 10px 0 10px 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  article{
+    position:relative;
+
+    .input{
+
+    }
+  }
+
+  .input{
+    margin-bottom: 10px;
+
+    span.error{
+      font-size: 11px;
+    }
+
+    label{
+      font-size: 12px;
+    }
+
+    &.x-large{
+      @include grid(9);
+    }
+    &.large{
+      @include grid(6);
+    }
+    &.x-medium{
+      @include grid(5);
+    }
+    &.medium{
+      @include grid(4);
+    }
+    &.small{
+      @include grid(3);
+    }
+    &.x-small{
+      @include grid(2);
+    }
+    &.xx-small{
+      @include grid(1);
+    }
+    &.with-label-x-small{
+      label{
+        font-size: 9px;
+        margin-bottom: 15px;
+      }
+    }
+    &.hidden{
+      display: none;
+    }
+    &.number-disabled-input p{
+      font-size: 11px;
+      margin-top: 13px;
+      margin-bottom: 0px;
+      overflow: hidden;
+      color: lighten($gray-main, 20%);
+    }
+
+   .customSelect{
+      font:12px sans-serif;
+      background:#fff url(http://i48.tinypic.com/2u7rpec.png) right center no-repeat;
+      border:1px solid $input-border-color;
+      color:#555;
+      padding: 8px 9px 5px 9px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px 5px;
+      width: inherit;
+   }
+  }
+
+  &.one-column{
+    article{
+      padding: 0 $gutter;
+      @include span-columns(18 of 18);
+      $class-slug: col !default;
+
+      @for $i from 1 through 18 {
+        .#{$class-slug}-#{$i} {
+          @include span-columns($i of 18);
+        }
+      }
+    }
+  }
+
+  &.two-columns{
+    @include clearfix;
+
+    article{
+      padding: 0 $gutter;
+      @include span-columns(9 of 18);
+      $class-slug: col !default;
+
+      @for $i from 1 through 9 {
+        .#{$class-slug}-#{$i} {
+          @include span-columns($i of 9);
+        }
+      }
+    }
+  }
+}
+
+.input{
+  position:relative;
+
+  .loader{
+    display:none;
+    position:absolute;
+    right:8px;
+    top:31px;
+    z-index:2;
+    background:url(asset_path('loader.gif'));
+    width:18px;
+    height:19px;
+
+    &.block{
+      display:block;
+    }
+
+  }
+}
+
+.filtros{
+  border: none !important;
+  background: #f2f2f3 ;
+    td{
+      border: none !important;
+    }
+}
+
+.filter-filds{
+  width: 25%;
+  height: 60px;
+  float: left;
+  margin-left: 20px;
+  .selectric{
+    width: 80%;
+  }
+  &:last-child{
+    float: left;
+  }
+  label{
+    font-size: 12px ;
+  }
+  input{
+    width: 150px !important;
+    border: 1px solid #d1d3d4 !important;
+    padding: 5px;
+    height: 22px;
+    left: 0 !important;
+    font-size: 12px;
+    color: #58595b;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+.submit-filter{
+  top: 28px;
+  left: 0 !important;
+}
+
+.company-filter{
+  height: 95px;
+}

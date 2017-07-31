@@ -22,6 +22,11 @@ Gem::Specification.new do |s|
   s.add_dependency "simple_form", "~> 3.0"
   s.add_dependency "jquery-rails"
   s.add_dependency "jquery-ui-rails"
+  s.add_dependency "bourbon",                "~> 4.2.6"
+  s.add_dependency "neat",                   "~> 1.7.2"
+  s.add_dependency "bitters",                "~> 1.1.0"
+  s.add_dependency "refills",                "~> 0.1.0"
+  s.add_dependency "normalize-rails",        "~> 3.0.3"
 
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "rspec-rails"

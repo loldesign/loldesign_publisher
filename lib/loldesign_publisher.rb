@@ -4,6 +4,11 @@ require 'jquery-ui-rails'
 require 'sass-rails'
 require 'modernizr-rails'
 require 'simple_form'
+require 'bourbon'
+require 'neat'
+require 'bitters'
+require 'refills'
+require 'normalize-rails'
 require 'loldesign_publisher/engine'
 
 module LoldesignPublisher
@@ -23,7 +28,6 @@ module LoldesignPublisher
     }
 
   rescue Exception
-    puts '[WARNING] run: bundle exec rails g initializer' 
+    puts '[WARNING] run: bundle exec rails g initializer'
   end
 end
-
