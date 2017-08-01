@@ -1,15 +1,35 @@
 @import "loldesign_publisher/base";
+@import 'normalize-rails';
+@import 'bourbon';
+@import 'neat';
 
-.container-main{
-  @include container;
+.container-main,
+.container{
+  @include outer-container();
+  position: relative;
+  zoom: 1;
 }
 
 .content{
-  @include grid(17);
-  @include push(1);
+  @include span-columns(17 of 24);;
+  @include shift(1 of 24);
   margin-top: 30px;
 }
 
 .ui-datepicker{
   width: inherit !important;
+}
+
+.content-wrapper {
+  @include shift(1 of 24);
+  @include span-columns(18 of 24);
+}
+
+#proposal_summary{
+  resize: none;
+}
+
+#project_description{
+  height: 168px;
+  resize: none;
 }

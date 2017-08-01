@@ -1,12 +1,19 @@
 @import "loldesign_publisher/base";
+@import 'normalize-rails';
+@import 'bourbon';
+@import "../base/variables";
+@import "../base/grid-settings";
+@import 'neat';
+@import "../base/typography";
 
 $link-color: #6d6e71;
 $link-active-color: #484045;
 $link-border-color: #c6c6c6;
 
 nav.main{
-  @include grid(4);
+  @include span-columns(5 of 24);
   margin-top: 30px;
+  margin-left: 0;
 
   ul{
     margin-top: 30px;

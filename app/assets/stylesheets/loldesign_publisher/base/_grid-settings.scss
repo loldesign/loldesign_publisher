@@ -1,10 +1,12 @@
+@import "neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
 // Neat Overrides
 $column: 36px;
 $gutter: 12px;
 $grid-columns: 24;
 $max-width: 1200px;
 
-$visual-grid: false;
+$visual-grid: true;
 $visual-grid-color: red;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.1;
