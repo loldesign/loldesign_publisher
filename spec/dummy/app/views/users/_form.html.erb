@@ -1,0 +1,25 @@
+<%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
+  <section class='fields-wrapper two-columns'>
+    <header>
+      <h2>User Info</h2>
+    </header>
+    <article>
+      <%= f.input :name, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :name, label: "CPF", input_html: {class: 'cpf'} %>
+      <%= f.input :email , wrapper_html: {class: 'col-9'} %>
+      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :name, label: "Date", input_html: {class: 'date'}%>
+    </article>
+    <article>
+      <%= f.input :description%>
+      <%= f.label :active, label: 'Status'%>
+      <%= f.input :active %>
+      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
+    </article>
+  </section>
+
+  <footer>
+    <%= submit_button f %>
+    <%= cancel_action(path: users_path) %>
+  </footer>
+<% end -%>

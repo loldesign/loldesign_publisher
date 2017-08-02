@@ -2,8 +2,8 @@
   <td><%= user.name %></td>
   <td><%= activable_field_for(user) %></td>
   <td>
-    <%= edit_resource   root_path %>
-    <%= remove_resource(root_path, {})%>
-    <%= show_resource_with_icon root_path %>
+    <%= edit_resource   edit_user_path(user) %>
+    <%= remove_resource(user_path(user), {})%>
+    <%= show_resource_with_icon user_path(user) %>
   </td>
 </tr>

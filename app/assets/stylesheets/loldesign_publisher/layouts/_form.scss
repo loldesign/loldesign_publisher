@@ -99,7 +99,24 @@ form{
         @include alpha;
       }
 
-      @include push(6);
+      @include push(7);
+    }
+  }
+}
+
+nav.main{
+  li{
+    ul.dropdown{
+      display: none;
+      margin-top: 0px;
+      margin-left:10px;
+
+      a{
+        font-size: 10px;
+      }
+    }
+    &:hover ul.dropdown{
+      display: block;
     }
   }
 }

@@ -1,0 +1,160 @@
+$border-color: #808284;
+
+.form {
+  .field-group{
+    @include clearfix;
+    margin-bottom: 20px;
+
+    article{
+      clear: left;
+
+      .input:first-child{
+        @include alpha;
+      }
+    }
+
+    &:nth-child(3){
+      padding-bottom:20px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+  .input{
+    margin-bottom: 10px;
+
+    label{
+      font-size: 12px;
+    }
+
+    &.large{
+      @include grid(7);
+    }
+    &.medium{
+      @include grid(4);
+    }
+    &.small{
+      @include grid(3);
+    }
+    &.x-small{
+      @include grid(2);
+    }
+    &.xx-small{
+      @include grid(1);
+    }
+  }
+}
+
+.table-page{
+  .list-edit{
+    font-size:12px !important;
+    text-decoration:underline;
+    color:#6d6e71;
+
+    &:hover{
+      color:#484045;
+    }
+  }
+}
+
+form {
+  footer {
+    .action {
+      @include shift(7 of 18);
+      @include span-columns(4 of 18);
+      .btn {
+        left: inherit;
+      }
+      .pretty {
+        @include span-columns(2 of 4);
+        &.cancel {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.proposal-form {
+  .easy-autocomplete {
+    padding: 0;
+  }
+}
+
+.search-form {
+  float: right;
+
+
+  .selectric-wrapper,
+  .easy-autocomplete,
+  input[type="search"],
+  input[type="text"]{
+    text-transform: uppercase;
+    outline: none;
+    @include grid(4);
+    font-size: 12px;
+    padding: 4px 4px 3px 4px;
+
+    &.small{
+      @include grid(3);
+    }
+  }
+
+  .selectric-wrapper,
+  .easy-autocomplete {
+    padding: 0;
+  }
+
+  .selectric-wrapper {
+    margin: 0 10px;
+    .selectric {
+      border-radius: 0;
+    }
+    .label {
+      min-height: 23px;
+      line-height: 25px;
+    }
+    .button {
+      height: 23px;
+    }
+  }
+
+  input[type="submit"]{
+    @include grid(2);
+    @include omega;
+    font-size: 12px;
+    cursor: hand;
+    cursor: pointer;
+    border: 0px;
+    background: lighten($gray-main, 55%);
+    padding: 5px 0;
+    outline: none;
+  }
+
+  .datepicker {
+    float: left;
+    margin: 0 10px;
+    width: 19%;
+    height: 23px;
+  }
+}
+
+.report-search-form {
+  float: left;
+  width: 100%;
+
+  .easy-autocomplete {
+    margin-left: 0;
+    margin-right: 10px;
+
+    input {
+      margin-left: 0;
+    }
+  }
+
+  .report-finder-button {
+    float: right !important;
+  }
+}
+
+.found-reports{
+  font-size: 12px;
+}

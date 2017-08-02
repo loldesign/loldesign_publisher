@@ -3,12 +3,12 @@ paths:
   logout: 'javascript://'
 
   menu_links:
-    users:   
-      name: 'Usuários'
+    users:
+      name: 'Users'
       path: users_path
     recipes:
-      name: 'Receitas'
-    schedules: 
-      name: 'Agenda / Cursos'
+      name: 'Recipes'
+    schedules:
+      name: 'Courses'
 
 page_title: 'Loldesign Publisher | Dummy App'
