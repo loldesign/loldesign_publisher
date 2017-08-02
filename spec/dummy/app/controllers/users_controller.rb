@@ -13,7 +13,7 @@ class UsersController < LoldesignPublisher::PublisherController
     if @user.save
       redirect_to users_path, notice: "Usuário criado com sucesso!"
     else
-      redirect_to new_user_path, alert: "Não foi possível criar o Usuário!"
+      render :new, alert: "Não foi possível criar o Usuário!"
     end
   end
 
@@ -26,7 +26,7 @@ class UsersController < LoldesignPublisher::PublisherController
     if @user.update_attributes(users_params)
       redirect_to edit_user_path(@user), notice: "Usuário atualizado com sucesso!"
     else
-      redirect_to edit_user_path(@user), alert: "Não foi possível editar o Usuário!"
+      render :edit, alert: "Não foi possível editar o Usuário!"
     end
   end
 
