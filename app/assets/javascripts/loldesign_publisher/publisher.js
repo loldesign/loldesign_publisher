@@ -18,6 +18,8 @@
 //= require ./main.js
 //= require ./activable.js
 //= require loldesign_publisher/publisher_rails_app.js
+//= require vex_plugin/vex.combined.min.js
+
 
 jQuery(document).ready(function($) {
   new saveBtnManager();

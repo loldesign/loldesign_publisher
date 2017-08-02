@@ -12,12 +12,13 @@
   <section class='container'>
     <%= render partial: '/layouts/loldesign_publisher/nav_main' %>
     <section class='content-wrapper'>
+
       <%= render partial: '/layouts/loldesign_publisher/modules/messages' %>
 
       <%= yield %>
     </section>
   </section>
-  <%= javascript_include_tag 'loldesign_publisher/publisher', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'loldesign_publisher/publisher' %>
   <%= javascript_include_tag '/grid.js' if Rails.env.development? %>
 </body>
 </html>
