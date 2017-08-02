@@ -7,8 +7,8 @@ require "loldesign_publisher/version"
 Gem::Specification.new do |s|
   s.name        = "loldesign_publisher"
   s.version     = LoldesignPublisher::VERSION
-  s.authors     = ["Eduardo Zaghi", "Marco Singer", "Fernando Fujie", "Paulo Henrique Sacramento"]
-  s.email       = ["eduardo@loldesign.com.br", "marco@loldesign.com.br", "fernando@loldesign.com.br", "paulo@loldesign.com.br"]
+  s.authors     = ["Eduardo Zaghi", "Marco Singer", "Fernando Fujie", "Paulo Henrique Sacramento", "Vinicius Oliveira Lima"]
+  s.email       = ["eduardo@loldesign.com.br", "marco@loldesign.com.br", "fernando@loldesign.com.br", "paulo@loldesign.com.br", "vinicius@loldesign.com.br"]
   s.homepage    = "http://www.loldesign.com.br"
   s.summary     = "Loldesign Publisher Gem"
   s.description = "It's help us to develop publisher area on our projects."
