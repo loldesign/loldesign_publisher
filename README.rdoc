@@ -83,96 +83,101 @@ Creates a button to remove the record
  <%= remove_resource(example_path(example), {})%>
 ---
 === Examples
-These examples below uses the model establishment, and address the helper listed above previously.
+These examples below uses the model user, and address the helper listed above previously.
  ---Index.html.erb---
- <%= title_page 'Estabelecimentos' %>
- <%= add_resource 'Novo Estabelecimento', new_admin_establishment_path %>
+ <%= title_page 'Title Page', subtitle: 'Subtitle' %>
 
- <%= render partial: 'filters' %>
+ <%= add_resource 'Add New User', new_user_path %>
+
+ <%= render partial: 'filters_by_from_to' %>
 
  <table class='table-page'>
    <thead>
      <tr>
-       <th>Nome Fantasia</th>
-       <th>Situação</th>
-       <th>Tipo de Estabelecimento</th>
-       <th>Condição</th>
+       <th>Name</th>
+       <th>Active</th>
        <th>&nbsp;</th>
      </tr>
    </thead>
-
    <tbody>
-     <%= display_list_for(@establishments, fields: 5) %>
+     <%= display_list_for(@users, fields: 3) %>
    </tbody>
  </table>
 
- <%= will_paginate @establishments %>
-
 ---
- ---_establishment.html.erb---
- <tr class="<%= !establishment.status ? 'selected' : ''%>">
-   <td><%= link_to establishment.fantasy_name, edit_admin_establishment_path(establishment), :class => "list-edit" %></td>
-   <td><%= establishment.status_text %></td>
-   <td><%= establishment.establishment_type_text %></td>
-   <td><%= establishment.aasm.human_state %></td>
+ ---_user.html.erb---
+ <tr>
+   <td><%= user.name %></td>
+   <td><%= activable_field_for(user) %></td>
    <td>
-     <%= edit_resource edit_admin_establishment_path(establishment) %>
-     <%= remove_resource(admin_establishment_path(establishment), {})%>
+     <%= edit_resource   edit_user_path(user) %>
+     <%= remove_resource(user_path(user), {})%>
+     <%= show_resource_with_icon user_path(user) %>
    </td>
  </tr>
+
 ---
 == Building _form.html.erb
-In the _form.html.erb we create a formulary with two or three columns, as we put the fields to be filled.
+In the _form.html.erb we create a formulary with one or two columns, as we put the fields to be filled.
 * simple_form_for
 Within this ruby code goes all the contents of the form
- <%= simple_form_for @establishment do |f| %>
+ <%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
    content of form
  <% end %>
 
-* Section with two or three columns
+* Section with one or two columns
 Within this html tag goes article and fields necessary for the construction of _form.
- <section class='three-columns'>
+ <section class='two-columns'>
+ <!-- <section class='column'> -->
    content of section
  </section>
 
 * Articles
-Each article is one of the columns created by section
- <article class='column'>
+You will need one or two article in you section
+ <article>
    fields of the form
  </article>
 
 * Footer
 The footer creates two buttons one to save and one to cancel the session.
- <footer>
-   <%= submit_button f %>
-   <%= cancel_action :back %>
- </footer>
+<footer>
+  <%= submit_button f %>
+  <%= cancel_action(path: users_path) %>
+</footer>
 ---
 === Examples
 Here is an code with the examples above:
 
- <%= simple_form_for @user do |f| %>
-   <section class='three-columns'>
-     <article class='column'>
-       <%= f.input :name, label: false, placeholder: 'Nome' %>
-       <%= f.input :email, label: false, placeholder: 'E-mail' %>
-       <%= f.input :password, label: false, placeholder: 'Senha', input_html: {class: 'small'} %>
-       <%= f.input :active, label: 'Ativo' %>
-     </article>
-     <article class='column'>
-       <%= f.input :description, label: false, placeholder: 'Descrição' %>
-     </article>
-     <article class='column'>
-       <%= f.input :name, label: false, placeholder: 'Data', input_html: {class: 'date'}%>
-       <%= f.input :name, label: false, placeholder: 'CPF', input_html: {class: 'cpf'} %>
-     </article>
-   </section>
+<%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
+  <section class='fields-wrapper two-columns'>
+    <header>
+      <h2>User Info</h2>
+    </header>
+    <article>
+      <%= f.input :name, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :name, label: "CPF", input_html: {class: 'cpf'} %>
+      <%= f.input :email , wrapper_html: {class: 'col-9'} %>
+      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
+      <%= f.input :name, label: "Date", input_html: {class: 'date'}%>
+    </article>
+    <article>
+      <%= f.input :description%>
+      <%= f.label :active, label: 'Status'%>
+      <%= f.input :active %>
+      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
+    </article>
+  </section>
 
-   <footer>
-     <%= submit_button f %>
-     <%= cancel_action :back %>
-   </footer>
- <% end -%>
+  <footer>
+    <%= submit_button f %>
+    <%= cancel_action(path: users_path) %>
+  </footer>
+<% end -%>
+
+---
+You can find a real example working inside are engine (https://github.com/loldesign/loldesign_publisher/tree/master/spec/dummy)
+It's a real project, you can clone loldesign_publishe and run with ```rails s```
+
 ---
 contiuar:
 loldesign_publisher:install /
@@ -184,6 +189,7 @@ https://bitbucket.org/loldesign/loldesign_publisher/src/8aa1fd8d9650/app/?at=mas
 ---
 https://bitbucket.org/loldesign/lol_crud_generator/src
 ---
+
 
 
 
