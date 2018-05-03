@@ -1,7 +1,7 @@
 class LoldesignPublisher::ActivablesController < LoldesignPublisher::PublisherController
   respond_to :html, :json
 
-  before_filter :load_resource
+  before_action :load_resource
 
   def create
     if @resource.update_attribute(:active, true)
