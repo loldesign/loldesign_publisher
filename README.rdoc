@@ -7,7 +7,7 @@ This version suport Rails > 5.0, for older version use branch __under_rails_5__
 ---
 === Getting Started
 Open +Gemfile+ file and add gem to project:
- gem "loldesign_publisher", '~> 2.0''
+ gem "loldesign_publisher", '~> 2.0'
 
 Run command:
  $ bundle install
