@@ -2,6 +2,8 @@
 
 == About
 Loldesign Publisher gem has the feature to make changes to views in order to leave it more enjoyable, also providing a laterally administrative menu.
+
+This version suport Rails > 5.0, for older version use branch _under_rails_5_
 ---
 === Getting Started
 Open +Gemfile+ file and add gem to project:
