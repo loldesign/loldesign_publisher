@@ -1,4 +1,4 @@
-class UsersController < LoldesignPublisher::PublisherController
+class UsersController < LoldesignPublisher::PublisherBootstrapController
 
   def index
     @users = User.all
