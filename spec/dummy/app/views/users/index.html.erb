@@ -1,26 +1,65 @@
-<%= title_page 'Title Page', subtitle: 'Subtitle' %>
+<div class="container-fluid">
 
-<%= add_resource 'Add New User', new_user_path %>
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">
+    <%= title_page 'Title Page', subtitle: 'Subtitle' %>
+  </h1>
 
-<%= render partial: 'filters_by_from_to' %>
+  <%= add_resource 'Add New User', new_user_path %>
 
-<table class='table-page'>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Active</th>
-      <th>&nbsp;</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= display_list_for(@users, fields: 3) %>
-  </tbody>
-</table>
+  <p class="mb-4">
+    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the 
+    <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.
+  </p>
 
-<!-- pagination example with will_paginate-->
-<div class="pagination">
-  <span class="previous_page disabled">← Anterior</span>
-  <em class="current">1</em>
-  <a rel="next" href="javascript://">2</a>
-  <a class="next_page" rel="next" href="javascript://">Próximo →</a>
+  <%= render partial: 'filters_by_from_to' %>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">
+        Listagem
+      </h6>
+    </div>
+
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+            </tr>
+          </tfoot>
+
+          <tbody>
+            <%= display_list_for(@users, fields: 3) %>
+          </tbody>
+        </table>
+
+        <!-- pagination example with will_paginate-->
+        <div class="pagination">
+          <span class="previous_page disabled">← Anterior</span>
+          <em class="current">1</em>
+          <a rel="next" href="javascript://">2</a>
+          <a class="next_page" rel="next" href="javascript://">Próximo →</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

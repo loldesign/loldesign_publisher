@@ -28,17 +28,18 @@
 		  <div id="content">
 
 		    <!-- Topbar -->
-		    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-		      <!-- Sidebar Toggle (Topbar) -->
-		      <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-		        <i class="fa fa-bars"></i>
-		      </button>
-		    </nav>
+		    <%= render partial: '/layouts/loldesign_publisher/publisher_bootstrap/topbar' %>
 
 	    	<%= yield %>
 		  </div>
+
+			<%= render partial: '/layouts/loldesign_publisher/publisher_bootstrap/footer' %>
 		</div>
 	</div>
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+	  <i class="fas fa-angle-up"></i>
+	</a>
 </body>
 </html>
