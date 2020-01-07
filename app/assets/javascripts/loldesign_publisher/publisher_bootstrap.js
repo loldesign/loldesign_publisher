@@ -3,12 +3,12 @@
 //= require jquery_ujs
 //= require jquery-ui/widgets/datepicker
 //= require jquery-ui/i18n/datepicker-pt-BR
+//= require ./libs/sb-admin-2.js
 //= require ./libs/jquery.mask.min.js
 //= require ./libs/bootstrap.min.js
 //= require ./libs/bootstrap.bundle.min.js
 //= require ./libs/ui/jquery.validation
 //= require ./plugins.js
-//= require ./main.js
 //= require ./activable.js
 //= require loldesign_publisher/publisher_rails_app.js
 //= require vex_plugin/vex.combined.min.js
