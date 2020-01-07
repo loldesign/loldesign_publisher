@@ -15,6 +15,7 @@ module LoldesignPublisher
 
       config.to_prepare do
         ApplicationController.helper(LoldesignPublisher::PublisherHelper)
+        ApplicationController.helper(LoldesignPublisher::PublisherBootstrapHelper)
       end
 
       config.generators do |g|
