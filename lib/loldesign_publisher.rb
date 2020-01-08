@@ -10,6 +10,7 @@ require 'bitters'
 require 'refills'
 require 'normalize-rails'
 require 'loldesign_publisher/engine'
+require 'will_paginate'
 
 module LoldesignPublisher
   class << self

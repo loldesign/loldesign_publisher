@@ -1,7 +1,6 @@
 class UsersController < LoldesignPublisher::PublisherBootstrapController
-
   def index
-    @users = User.all
+    @users = User.order(created_at: :desc).page(params[:page] || 1).per_page(5)
   end
 
   def new

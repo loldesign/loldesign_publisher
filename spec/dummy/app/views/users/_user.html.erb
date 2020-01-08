@@ -1,9 +1,11 @@
 <tr>
   <td><%= user.name %></td>
+  <td><%= user.email %></td>
+  <td><%= user.description.truncate(40) %></td>
   <td><%= activable_field_for(user) %></td>
   <td>
-    <%= edit_resource   edit_user_path(user) %>
-    <%= remove_resource(user_path(user), {})%>
-    <%= show_resource_with_icon user_path(user) %>
+    <%= bootstrap_edit_resource   edit_user_path(user) %>
+    <%= bootstrap_remove_resource(user_path(user), {})%>
+    <%= bootstrap_show_resource_with_icon user_path(user) %>
   </td>
 </tr>

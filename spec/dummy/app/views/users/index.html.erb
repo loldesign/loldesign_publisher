@@ -17,11 +17,6 @@
     </div>
   </div>
 
-  <p class="mb-4 w-50">
-    DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the 
-    <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.
-  </p>
-
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
     <div class="card-header py-3 d-flex justify-content-between">
@@ -58,27 +53,25 @@
           <thead>
             <tr>
               <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>E-mail</th>
+              <th>Description</th>
+              <th>Activate User</th>
+              <th>Actions</th>
             </tr>
           </thead>
 
           <tfoot>
             <tr>
               <th>Name</th>
-              <th>Position</th>
-              <th>Office</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+              <th>E-mail</th>
+              <th>Description</th>
+              <th>Activate User</th>
+              <th>Actions</th>
             </tr>
           </tfoot>
 
           <tbody>
-            <%= display_list_for(@users, fields: 3) %>
+            <%= display_list_for(@users, fields: 4) %>
           </tbody>
         </table>
 
@@ -86,21 +79,13 @@
         <div class="table-footer d-flex justify-content-between mt-5">
           <div class="dataTables_info d-flex align-items-center" id="datatable-buttons_info" role="status" aria-live="polite">
             <p class="mb-0">
-              Showing 1 to 10 of 57 entries
+              <%= page_entries_info @users %>
             </p>
           </div>
           
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-end mb-0">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
+              <%= will_paginate @users %>
             </ul>
           </nav>
         </div>

@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bitters",                "~> 1.1.0"
   s.add_dependency "refills",                "~> 0.1.0"
   s.add_dependency "normalize-rails",        "~> 3.0.3"
+  s.add_dependency "will_paginate",          "~> 3.1.7"
 
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "rspec-rails"
