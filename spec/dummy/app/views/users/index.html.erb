@@ -1,25 +1,55 @@
 <div class="container-fluid">
+  
+  <div class="header-page d-flex justify-content-between mb-2">
+    <!-- Page Heading -->
+    <h6 class="h3 mb-0 text-gray-800">
+      <%= title_page 'Title Page', subtitle: 'Subtitle' %>
+    </h6>
 
-  <!-- Page Heading -->
-  <h1 class="h3 mb-2 text-gray-800">
-    <%= title_page 'Title Page', subtitle: 'Subtitle' %>
-  </h1>
+    <div class="breadcrumbs d-flex align-items-center">
+      <li class="breadcrumbs__item">
+        <%= link_to "LolDesignPublisher", "javascript:void(0)" %>
+      </li>
 
-  <%= add_resource 'Add New User', new_user_path %>
+      <li class="breadcrumbs__item">
+        <%= link_to "Users", "javascript:void(0)" %>
+      </li>
+    </div>
+  </div>
 
-  <p class="mb-4">
+  <p class="mb-4 w-50">
     DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the 
     <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.
   </p>
 
-  <%= render partial: 'filters_by_from_to' %>
-
   <!-- DataTales Example -->
   <div class="card shadow mb-4">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">
-        Listagem
-      </h6>
+    <div class="card-header py-3 d-flex justify-content-between">
+      <div class="left-group d-flex">
+        <div class="input-group mb-0">
+          <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-0">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Options</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option selected>Choose...</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="right-group d-flex">
+        <%= add_resource 'Add New User', new_user_path %>
+        
+        <div class="btn light">
+          <%= link_to "Export", 'javascript:void(0)' %>
+        </div>
+      </div>
     </div>
 
     <div class="card-body">
@@ -52,12 +82,27 @@
           </tbody>
         </table>
 
-        <!-- pagination example with will_paginate-->
-        <div class="pagination">
-          <span class="previous_page disabled">← Anterior</span>
-          <em class="current">1</em>
-          <a rel="next" href="javascript://">2</a>
-          <a class="next_page" rel="next" href="javascript://">Próximo →</a>
+        <!-- pagination example with will_paginate -->
+        <div class="table-footer d-flex justify-content-between mt-5">
+          <div class="dataTables_info d-flex align-items-center" id="datatable-buttons_info" role="status" aria-live="polite">
+            <p class="mb-0">
+              Showing 1 to 10 of 57 entries
+            </p>
+          </div>
+          
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>

@@ -1,0 +1,17 @@
+.btn {
+  &.default {
+    background: $primary;
+    
+    a {
+      color: $white;
+    }
+  }
+
+  &.light {
+    background: $gray-400;
+
+    a {
+      color: $primary;
+    }
+  }
+}

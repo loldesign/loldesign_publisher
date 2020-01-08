@@ -1,0 +1,22 @@
+/* Breadcrumbs */
+.breadcrumbs {
+  &__item {
+    padding-left: .5rem;
+
+    &:first-of-type {
+      padding-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      display: inline-block;
+      padding-right: .5rem;
+      font-weight: 900;
+      content: '\f105';
+      font-family: 'Font Awesome 5 Free';
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <header class="title-page" data-show=<%= show_options[:display] %> data-save=<%= save_options[:display] %>>
-  <h2>
+  <h4>
     <%= title %>
     <%= content_tag(:small, subtitle_options[:text]) if subtitle_options[:display]%>
-  </h2>
+  </h4>
 
   <%= show_resource 'Visualizar', show_options[:path] %>
   <%= save_resource 'Salvar'    , save_options[:path] %>
