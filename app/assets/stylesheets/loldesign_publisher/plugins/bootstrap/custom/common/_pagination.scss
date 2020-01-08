@@ -1,0 +1,46 @@
+.pagination {
+  .previous_page {
+    margin-left: 0;
+  }
+
+  a,
+  span,
+  em {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #0c0c0c;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+
+    &:hover {
+      z-index: 2;
+      color: black;
+      text-decoration: none;
+      background-color: #e9ecef;
+      border-color: #dee2e6;
+    }
+
+    &.active {
+      z-index: 1;
+      color: $pagination-active-color;
+      background-color: $pagination-active-bg;
+      border-color: $pagination-active-border-color;
+    }
+
+    &.disabled {
+      color: $pagination-disabled-color;
+      pointer-events: none;
+      cursor: auto;
+      background-color: $pagination-disabled-bg;
+      border-color: $pagination-disabled-border-color;
+    }
+  }
+
+  em {
+    background: $gray-400;
+    color: $primary;
+  }
+}
