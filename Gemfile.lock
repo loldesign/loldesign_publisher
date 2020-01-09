@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    loldesign_publisher (2.0.0)
+    loldesign_publisher (3.0.0)
       bitters (~> 1.1.0)
       bourbon (~> 4.2.6)
       jquery-rails
