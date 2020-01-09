@@ -1,0 +1,89 @@
+<div class="container-fluid">
+	<%= render partial: 'title_page', locals: { title: @user.name, link: 'javscript://'} %>
+
+	<div class="card">
+	  <div class="card-body">
+      <div class="col-xl-6">
+        <div class="form-group">
+        	<h5>
+        		Name
+        	</h5>
+
+          <p>
+          	<%= @user.name %>
+          </p>
+        </div>
+
+        <div class="form-group">
+        	<h5>
+        		E-mail
+        	</h5>
+
+          <p>
+          	<%= @user.email %>
+          </p>
+        </div>
+
+        <div class="form-group">
+        	<h5>
+        		Description
+        	</h5>
+
+          <p>
+          	<%= @user.description %>
+          </p>
+        </div>
+
+        <div class="form-group">
+        	<h5>
+        		Password
+        	</h5>
+
+          <p>
+          	<%= @user.password %>
+          </p>
+        </div>
+
+        <div class="form-group">
+        	<h5>
+        		Active
+        	</h5>
+
+          <p>
+          	<%= @user.active %>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <!-- Date View -->
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="text" class="form-control" data-provide="datepicker" data-date-format="d-M-yyyy" data-date-autoclose="true">
+        </div>
+
+        <div class="form-group mb-0">
+          <label for="project-overview">Team Members</label>
+          
+          <select class="form-control select2 select2-hidden-accessible" data-toggle="select2" data-select2-id="1" tabindex="-1" aria-hidden="true">
+            <option data-select2-id="3">Select</option>
+            <option value="AZ">Mary Scott</option>
+            <option value="CO">Holly Campbell</option>
+            <option value="ID">Beatrice Mills</option>
+            <option value="MT">Melinda Gills</option>
+            <option value="NE">Linda Garza</option>
+            <option value="NM">Randy Ortez</option>
+            <option value="ND">Lorene Block</option>
+            <option value="UT">Mike Baker</option>
+          </select>
+        </div>
+      </div> <!-- end col-->
+
+      <footer>
+        <%= link_to "Editar", edit_user_path(@user), class: 'btn default' %>
+        <%= link_to "Remover", user_path(@user), method: :delete, data: {confirm: 'Você tem certeza que deseja remover?'}, class: 'btn remove mx-2' %>
+        <%= link_to "Voltar", users_path, class: 'btn light' %>
+      </footer>
+	  </div> <!-- end card-body -->
+	</div> <!-- end card-->
+</div>

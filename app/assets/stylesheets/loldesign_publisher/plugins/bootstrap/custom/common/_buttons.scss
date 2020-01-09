@@ -30,4 +30,9 @@
       border: none;
     }
   }
+
+  &.remove {
+    background: $danger;
+    color: $white;
+  }
 }

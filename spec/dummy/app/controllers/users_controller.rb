@@ -1,4 +1,6 @@
 class UsersController < LoldesignPublisher::PublisherBootstrapController
+  before_action :set_user, except: [:new, :create, :index]
+
   def index
     @users = User.order(created_at: :desc).page(params[:page] || 1).per_page(5)
   end
@@ -16,6 +18,9 @@ class UsersController < LoldesignPublisher::PublisherBootstrapController
     end
   end
 
+  def show
+  end
+
   def edit
     @user = User.find(params[:id])
   end
@@ -30,7 +35,6 @@ class UsersController < LoldesignPublisher::PublisherBootstrapController
   end
 
   def destroy
-    @user = User.find(params[:id])
     if @user.destroy
       redirect_to users_path, notice: "Usuário removido com sucesso!"
     else
@@ -39,6 +43,10 @@ class UsersController < LoldesignPublisher::PublisherBootstrapController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+  end
 
   def users_params
     params.require(:user).permit(:name, :email, :password, :description, :active)
