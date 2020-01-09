@@ -1,17 +1,33 @@
+/* Buttons */
 .btn {
   &.default {
     background: $primary;
+    color: $white;
     
     a {
       color: $white;
     }
+
+    /* Button With Icon */
+    i {
+      padding-right: .75rem;
+    }
   }
 
-  &.light {
+  &.light,
+  &.cancel {
     background: $gray-400;
 
     a {
       color: $primary;
+    }
+  }
+
+  &.save {
+    input {
+      background: transparent;
+      color: $white;
+      border: none;
     }
   }
 }

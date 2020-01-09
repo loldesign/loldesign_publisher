@@ -1,6 +1,15 @@
 /* Sidebar */
 .sidebar-brand-icon {
-	align-items: center;
-	display: flex;
-	height: 70px;
+  align-items: center;
+  display: flex;
+  height: 70px;
+}
+
+.sidebar {
+  &.toggled,
+  &.accordion {
+    -webkit-transition:all 0.2s ease;
+    -moz-transition:all 0.2s ease;
+    transition:all 0.2s ease;
+  }
 }

@@ -1,4 +1,38 @@
 /* Forms */
+form {
+  div[class*='col-'] {
+    float: left;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  label {
+    abbr {
+      display: none;
+    }
+  }
+
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .pretty {
+      margin-right: .75rem;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .input-group {
   .input-group-text {
     background: $gray-400;

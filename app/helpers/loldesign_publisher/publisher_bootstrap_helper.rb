@@ -28,6 +28,12 @@ module LoldesignPublisher
       end
     end
 
+    def bootstrap_submit_button(form, text='Salvar')
+      content_tag :div, class: 'pretty medium default btn save' do
+        form.submit text, data: {'disable-with' => '...'}
+      end
+    end
+
     def bootstrap_nav_main_link(key)
       link_name = LoldesignPublisher.config[:menu_links][key]['name']
 
