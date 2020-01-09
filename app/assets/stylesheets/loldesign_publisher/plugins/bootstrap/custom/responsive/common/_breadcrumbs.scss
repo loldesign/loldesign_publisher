@@ -1,9 +1,15 @@
 /* Mobile ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
-	/* Breadcrumbs */
-	.header-page {
-		.breadcrumbs {
-		  display: none !important;
-		}
-	}
+  /* Breadcrumbs */
+  .header-page {
+    .breadcrumbs {
+      display: none !important;
+    }
+  }
+
+  .page-title-box {
+    .breadcrumb {
+      display: none;
+    }
+  }
 }
