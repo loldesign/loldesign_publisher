@@ -1,6 +1,7 @@
 paths:
   logo:       'loldesign_publisher/logo.svg'
   logo_white: 'loldesign_publisher/logo_loldesign_white.png'
+  logo_error: 'loldesign_publisher/logo_error.png'
   logout:     'javascript://'
 
   menu_links:

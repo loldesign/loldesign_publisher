@@ -8,6 +8,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( loldesign_publisher.css loldesign_publisher.js )
 Rails.application.config.assets.precompile += %w( loldesign_publisher/logo.svg )
 Rails.application.config.assets.precompile += %w( loldesign_publisher/logo_loldesign_white.png )
+Rails.application.config.assets.precompile += %w( loldesign_publisher/logo_error.png )
 
 Rails.application.config.assets.precompile += %w( loldesign_publisher/publisher_bootstrap.css )
 Rails.application.config.assets.precompile += %w( loldesign_publisher/publisher_bootstrap.js )

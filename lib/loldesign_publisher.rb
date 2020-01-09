@@ -24,6 +24,7 @@ module LoldesignPublisher
     self.config = {
       logo:           config[:paths]['logo'],
       logo_white:     config[:paths]['logo_white'],
+      logo_error:     config[:paths]['logo_error'],
       logout:         config[:paths]['logout'],
       menu_links:     config[:paths]['menu_links'],
       page_title:     config[:page_title]
