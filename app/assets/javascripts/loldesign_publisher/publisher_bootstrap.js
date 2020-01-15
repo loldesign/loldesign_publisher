@@ -11,6 +11,7 @@
 //= require ./libs/ui/jquery.validation
 //= require ./plugins.js
 //= require ./activable.js
+//= require ./sidebar_toggle.js
 //= require loldesign_publisher/publisher_rails_app.js
 //= require vex_plugin/vex.combined.min.js
 

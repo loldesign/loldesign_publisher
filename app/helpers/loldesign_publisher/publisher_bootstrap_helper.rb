@@ -35,17 +35,37 @@ module LoldesignPublisher
     end
 
     def bootstrap_nav_main_link(key)
-      link_name = LoldesignPublisher.config[:menu_links][key]['name']
+      link_name = key['name']
 
-      if LoldesignPublisher.config[:menu_links][key]['path'].present?
-        link_path = send(LoldesignPublisher.config[:menu_links][key]['path'])
+      if key['path'].present?
+        link_path = send(key['path'])
         options   = {data: {active: controller_name == key}, class: 'nav-link'}
       else
         link_path = 'javascript://'
-        options   = {class: 'nav-link'}
+        options   = {class: 'nav-link collapsed'}
       end
+
+      icon_path = key['icon'].present? ? key['icon'] : 'exclamation-circle'
       
-      link_to link_name, link_path, options
+      content_tag :div, class: "item-box" do
+        link_to link_path, options do
+          content_tag(:i, nil, class: "fas fa-fw fa-#{icon_path}") +
+          content_tag(:span, link_name)
+        end
+      end
+    end
+
+    def bootstrap_nav_drop_list(key)
+      content_tag :div, class: "nav-item collapsable hide" do
+        content_tag :div, class: "bg-white py-2 collapse-inner rounded" do
+          key['drop'].each do |drop_key, drop_value|
+            options   = {data: {active: controller_name == drop_key}, class: 'collapse-item'}
+            drop_path = drop_value['path'].present? ? send(drop_value['path']) : 'javascript://'
+
+            concat link_to drop_value['name'], drop_path, options
+          end
+        end
+      end
     end
   end
 end

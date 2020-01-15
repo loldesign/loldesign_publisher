@@ -5,12 +5,26 @@ paths:
   logout:     'javascript://'
 
   menu_links:
-    users:
-      name: 'Users'
-      path: users_path
-    recipes:
-      name: 'Recipes'
-    schedules:
-      name: 'Courses'
+    'Interface':
+      users:
+        name: 'Users'
+        path: users_path
+        icon: 'wrench'
+      recipes:
+        name: 'Recipes'
+        drop:
+          first:
+            name: 'List'
+            path: 'users_path'
+          second:
+            name: 'List 2'
+            path: 'users_path'
+    'Addons':
+      schedules:
+        name: 'Courses'
+        drop:
+          first:
+            name: 'Others'
+            path: 'users_path'
 
 page_title: 'Loldesign Publisher | Dummy App'
