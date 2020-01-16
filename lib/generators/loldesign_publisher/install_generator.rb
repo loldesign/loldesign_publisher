@@ -21,6 +21,10 @@ module LoldesignPublisher
 
     def add_route
       route "mount LoldesignPublisher::Rails::Engine => '/'"
+      # route "get 'login',          to: 'pages#login',     as: :login"
+      # route "get 'register',       to: 'pages#register',  as: :register"
+      # route "get 'not_found',      to: 'pages#error_404', as: :not_found"
+      # route "get 'internal_error', to: 'pages#error_500', as: :internal_error"
     end
   end
 end 
