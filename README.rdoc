@@ -54,6 +54,49 @@ This file contains the following code:
 * page_title: 'Loldesign Publisher', The string specified here will be the name that is displayed in the browser tab.
 
 ---
+=== Bootstrap Customize the Left Menu
+Will be available in the config folder the file: +loldesign_publisher.yml+
+
+This file contains the following code:
+  paths:
+    logo:   'loldesign_publisher/logo.svg'
+    logout: 'javascript://'
+
+    menu_links:
+      'Admin':
+        banners:
+          name: 'Banner Home'
+          path: banners_path
+        users:
+          name: 'Users'
+          drop:
+            admins:
+              name: 'Admins'
+              path: admins_path
+            employees:
+              name: 'Employees'
+              path: employees_path
+      'Interface':
+        schedules:
+          name: 'Schedules'
+          icon: 'file'
+          drop:
+            files:
+              name: 'Files'
+              path: files_path
+  page_title: 'Loldesign Publisher'
+
+
+* logo: 'loldesign_publisher/logo.svg', It is the path to image above the side menu
+* logout: 'javascript://', Is used to end the session by default is disabled, to enable it is necessary to use the devise gem for user authentication.
+* menu_links:, From menu_links are available blocks of code in which banners is the controller's name, but without the rest of the name, example: banners_controller.rb, the name is fictitious banners in your project, you must enter the corresponding names to their controllers.
+* name: 'Banner Home', It's receive one of any name your choice for the menu link.
+* path: users_path, Receives the route by which you want the link to answer.
+* icon: 'file', It's receive any free icon name from (https://fontawesome.com/icons?d=gallery)
+* drop: If this key is enabled, a droplist is displayed and the same structure of controller_name, name and path are kept.
+* page_title: 'Loldesign Publisher', The string specified here will be the name that is displayed in the browser tab.
+
+---
 === Enable Loldesign Publisher
 
 Add to controller:
