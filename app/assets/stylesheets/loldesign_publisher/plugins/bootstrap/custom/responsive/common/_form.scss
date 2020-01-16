@@ -1,0 +1,31 @@
+/* Mobile ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {	
+	/* Forms */
+	form,
+	.card {
+	  div[class*='col-'] {
+	    &:first-of-type {
+	      padding: 0;
+	    }
+
+	    &:last-of-type {
+	      padding: 0;
+	    }
+	  }
+
+	  footer {
+	    width: 100%;
+	    display: flex;
+	    justify-content: center;
+	    padding-top: 1.25rem;
+
+	    .pretty {
+	      margin-right: .75rem;
+
+	      &:last-of-type {
+	        margin-right: 0;
+	      }
+	    }
+	  }
+	}
+}

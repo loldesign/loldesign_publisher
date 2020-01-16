@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= LoldesignPublisher.config[:page_title] %></title>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no">
+  <%= csrf_meta_tags %>
+
+  <!-- Stylesheets -->
+  <%= stylesheet_link_tag 'loldesign_publisher/publisher_bootstrap', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" integrity="sha384-REHJTs1r2ErKBuJB0fCK99gCYsVjwxHrSU0N7I1zl9vZbggVJXRMsv/sLlOAGb4M" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Javascripts -->
+  <%= javascript_include_tag 'loldesign_publisher/publisher_bootstrap' %>
+  <%= javascript_include_tag '/grid.js' if Rails.env.development? %>
+  <script src="https://kit.fontawesome.com/67bf181556.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top">
+	<div id="wrapper">
+
+  	<%= render partial: '/layouts/loldesign_publisher/publisher_bootstrap/sidebar' %>
+	
+	  <div id="content-wrapper" class="d-flex flex-column">
+	    <%= render partial: '/layouts/loldesign_publisher/modules/messages' %>
+
+		  <!-- Main Content -->
+		  <div id="content">
+
+		    <!-- Topbar -->
+		    <%= render partial: '/layouts/loldesign_publisher/publisher_bootstrap/topbar' %>
+
+	    	<%= yield %>
+		  </div>
+
+			<%= render partial: '/layouts/loldesign_publisher/publisher_bootstrap/footer' %>
+		</div>
+	</div>
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top">
+	  <i class="fas fa-angle-up"></i>
+	</a>
+</body>
+</html>

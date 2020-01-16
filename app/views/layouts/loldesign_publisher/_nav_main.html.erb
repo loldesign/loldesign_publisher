@@ -2,11 +2,12 @@
   <figure>
     <%= image_tag LoldesignPublisher.config[:logo] %>
   </figure>
+
   <ul>
-      <% LoldesignPublisher.config[:menu_links].each_key do |key|%>
-        <li>
-          <%= nav_main_link key %>
-        </li>
-      <% end -%>
-    </ul>
+    <% LoldesignPublisher.config[:menu_links].each_key do |key|%>
+      <li>
+        <%= nav_main_link key %>
+      </li>
+    <% end %>
+  </ul>
 </nav>

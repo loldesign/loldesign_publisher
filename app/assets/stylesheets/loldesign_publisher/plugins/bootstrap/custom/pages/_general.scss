@@ -1,0 +1,30 @@
+/* General Page Styles */
+body {
+  &.bg-gradient-primary {
+    height: 100vh;
+
+    .container {
+      height: 100%;
+
+      .row {
+        height: 100%;
+      } 
+    }
+  } 
+}
+
+/* Error Logo */
+.error-logo {
+  transform: rotate(180deg);
+  width: 10%;
+  margin: 0 1rem;
+}
+
+/* Background Error Pages */
+.error-main-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $gray-400;
+  left: 0;
+}

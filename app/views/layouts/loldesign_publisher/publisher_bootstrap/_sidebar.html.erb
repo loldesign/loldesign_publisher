@@ -1,0 +1,32 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+  <div class="sidebar-brand-icon">
+    <%= image_tag LoldesignPublisher.config[:logo_white], class: "w-50 d-flex align-self-center mx-auto my-2" %>
+  </div>
+  
+  <% LoldesignPublisher.config[:menu_links].each do |key, list| %>
+    <div class="sidebar-heading">
+      <%= key %>
+    </div>
+
+    <% list.each do |list_key, list_value| %>
+      <div class="nav-item">
+        <%= bootstrap_nav_main_link list_value %>
+        
+        <% if list_value['drop'].present? %>
+          <%= bootstrap_nav_drop_list list_value %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+  <% end %>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline mt-4">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+  </div>
+</ul>

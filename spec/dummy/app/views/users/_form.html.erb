@@ -1,25 +1,61 @@
-<%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
-  <section class='fields-wrapper two-columns'>
-    <header>
-      <h2>User Info</h2>
-    </header>
-    <article>
-      <%= f.input :name, wrapper_html: {class: 'col-9'} %>
-      <%= f.input :name, label: "CPF", input_html: {class: 'cpf'} %>
-      <%= f.input :email , wrapper_html: {class: 'col-9'} %>
-      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
-      <%= f.input :name, label: "Date", input_html: {class: 'date'}%>
-    </article>
-    <article>
-      <%= f.input :description%>
-      <%= f.label :active, label: 'Status'%>
-      <%= f.input :active %>
-      <%= f.input :password, wrapper_html: {class: 'col-9'} %>
-    </article>
-  </section>
+<div class="card">
+  <div class="card-body">
+    <%= simple_form_for @user, html: {class: 'form-uppercase admin-user-form'} do |f| %>
+      <div class="col-xl-6">
+        <div class="form-group">
+          <%= f.label :name, label: 'Name'%>
+          <%= f.input :name, placeholder: 'Enter user name', label: false, input_html: {class: 'form-control'} %>
+        </div>
 
-  <footer>
-    <%= submit_button f %>
-    <%= cancel_action(path: users_path) %>
-  </footer>
-<% end -%>
+        <div class="form-group">
+          <%= f.label :email, label: 'E-mail'%>
+          <%= f.input :email, placeholder: 'Enter user e-mail', label: false, input_html: {class: 'form-control'} %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :description, label: 'Description'%>
+          <%= f.input :description, as: :text, placeholder: 'Enter user description', label: false, input_html: {class: 'form-control'}%>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, label: 'Password'%>
+          <%= f.input :password, placeholder: 'Enter user password', label: false, input_html: {class: 'form-control'} %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :active, label: 'Active'%>
+          <%= f.input :active, label: false, input_html: {class: 'form-control'} %>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <!-- Date View -->
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="text" class="form-control" data-provide="datepicker" data-date-format="d-M-yyyy" data-date-autoclose="true">
+        </div>
+
+        <div class="form-group mb-0">
+          <label for="project-overview">Team Members</label>
+          
+          <select class="form-control select2 select2-hidden-accessible" data-toggle="select2" data-select2-id="1" tabindex="-1" aria-hidden="true">
+            <option data-select2-id="3">Select</option>
+            <option value="AZ">Mary Scott</option>
+            <option value="CO">Holly Campbell</option>
+            <option value="ID">Beatrice Mills</option>
+            <option value="MT">Melinda Gills</option>
+            <option value="NE">Linda Garza</option>
+            <option value="NM">Randy Ortez</option>
+            <option value="ND">Lorene Block</option>
+            <option value="UT">Mike Baker</option>
+          </select>
+        </div>
+      </div> <!-- end col-->
+
+      <footer>
+        <%= bootstrap_submit_button f %>
+        <%= cancel_action(path: users_path) %>
+      </footer>
+    <% end -%>
+  </div> <!-- end card-body -->
+</div> <!-- end card-->

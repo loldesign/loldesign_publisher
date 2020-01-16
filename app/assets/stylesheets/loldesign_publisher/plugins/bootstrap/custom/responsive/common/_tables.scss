@@ -1,0 +1,51 @@
+/* Mobile ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
+  /* Table Header */
+  .card-header {
+    flex-direction: column;
+
+    .left-group,
+    .right-group {
+      flex-direction: column;
+
+      .input-group,
+      .btn {
+        &:first-of-type {
+          margin-bottom: 1.25rem !important;
+          margin-right: 0;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .right-group {
+      .btn {
+        &:first-of-type {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+
+  /* Table Footer */
+  .table-footer {
+    flex-direction: column;
+    
+    .dataTables_info {
+      justify-content: center !important;
+    }
+
+    nav {
+      ul {
+        justify-content: center !important;
+      }
+
+      ul {
+        margin-top: 1.25rem;
+      }
+    }
+  }
+}

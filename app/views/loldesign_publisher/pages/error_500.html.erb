@@ -1,0 +1,38 @@
+<div class="error-main-bg"></div>
+<div class="row justify-content-center align-items-center">
+  <div class="col-lg-5">
+    <div class="card">
+      <div class="card-header pt-4 pb-4 text-center bg-primary">
+        <a href="<%= root_path %>">
+          <span>
+          	<%= image_tag LoldesignPublisher.config[:logo_white], class: "w-50 d-flex align-self-center mx-auto my-2" %>
+          </span>
+        </a>
+      </div>
+        
+      <div class="card-body p-4">
+        <div class="text-center">
+          <h1 class="text-error d-flex justify-content-center align-items-center">
+          	5
+          	<%= image_tag LoldesignPublisher.config[:logo_error], class: "error-logo" %>
+          	<%= image_tag LoldesignPublisher.config[:logo_error], class: "error-logo my-0 mx-0" %>
+          </h1>
+
+          <h4 class="text-uppercase text-danger mt-3">Internal Server Error</h4>
+
+          <p class="text-muted mt-3">
+          	Why not try refreshing your page? or you can contact 
+          	<a href="" class="text-muted">
+          		<b>Support</b>
+          	</a>
+          </p>
+
+          <a class="btn default mt-3" href="<%= root_path %>">
+          	<i class="fas fa-chevron-left"></i>
+          	Return Home
+          </a>
+        </div>
+      </div> 
+    </div>
+  </div> 
+</div>

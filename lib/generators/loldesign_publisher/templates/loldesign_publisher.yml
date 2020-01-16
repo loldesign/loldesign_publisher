@@ -1,13 +1,30 @@
 paths:
-  logo:   'loldesign_publisher/logo.svg'
-  logout: 'javascript://'
+  logo:       'loldesign_publisher/logo.svg'
+  logo_white: 'loldesign_publisher/logo_loldesign_white.png'
+  logo_error: 'loldesign_publisher/logo_error.png'
+  logout:     'javascript://'
 
   menu_links:
-    controller_01:   
-      name: 'link_01'
-      path: path_01_path
-    controller_02:
-      name: 'link 02'
-      path: path_02_path
+    'Area 01':
+      controller_01:
+        name: 'link_01'
+        path: path_01
+        icon: 'icon'
+      controller_02:
+        name: 'link_02'
+        drop:
+          drop_controller_01:
+            name: 'drop_link_01'
+            path: 'drop_path_01'
+          drop_controller_02:
+            name: 'drop_link_02'
+            path: 'drop_path_02'
+    'Area 02':
+      controller_01:
+        name: 'link_01'
+        drop:
+          drop_controller_01:
+            name: 'drop_link_01'
+            path: 'drop_path_01'
 
 page_title: 'Loldesign Publisher'
